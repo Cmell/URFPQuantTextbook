@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Within-Participant Analysis | URFP Quantitative Project Textbook</title>
+  <meta name="description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Within-Participant Analysis | URFP Quantitative Project Textbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Within-Participant Analysis | URFP Quantitative Project Textbook" />
+  
+  <meta name="twitter:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+<meta name="author" content="Christopher Mellinger, Ph.D." />
+
+
+<meta name="date" content="2023-04-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="regression.html"/>
+<link rel="next" href="mediation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">URFP Analysis Textbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#r-help"><i class="fa fa-check"></i><b>1.1</b> R Help</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#using-r-studio"><i class="fa fa-check"></i><b>1.2</b> Using R Studio</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#packages-this-book-uses"><i class="fa fa-check"></i><b>1.3</b> Packages This Book Uses</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basicops.html"><a href="basicops.html"><i class="fa fa-check"></i><b>2</b> Data Operaions</a></li>
+<li class="chapter" data-level="3" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>3</b> Regression</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="regression.html"><a href="regression.html#what-is-regression"><i class="fa fa-check"></i><b>3.1</b> What Is Regression?</a></li>
+<li class="chapter" data-level="3.2" data-path="regression.html"><a href="regression.html#intepreting-regression-output"><i class="fa fa-check"></i><b>3.2</b> Intepreting Regression Output</a></li>
+<li class="chapter" data-level="3.3" data-path="regression.html"><a href="regression.html#centering"><i class="fa fa-check"></i><b>3.3</b> Centering</a></li>
+<li class="chapter" data-level="3.4" data-path="regression.html"><a href="regression.html#interpreting-regression-with-mean-centered-predictors"><i class="fa fa-check"></i><b>3.4</b> Interpreting Regression with Mean-Centered Predictors</a></li>
+<li class="chapter" data-level="3.5" data-path="regression.html"><a href="regression.html#chapter-takeaways"><i class="fa fa-check"></i><b>3.5</b> Chapter Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html"><i class="fa fa-check"></i><b>4</b> Within-Participant Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#computing-difference-scores"><i class="fa fa-check"></i><b>4.1</b> Computing Difference Scores</a></li>
+<li class="chapter" data-level="4.2" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#using-regression"><i class="fa fa-check"></i><b>4.2</b> Using Regression</a></li>
+<li class="chapter" data-level="4.3" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#important-aside-contrast-codes"><i class="fa fa-check"></i><b>4.3</b> Important Aside: Contrast Codes</a></li>
+<li class="chapter" data-level="4.4" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#predicting-a-difference-score"><i class="fa fa-check"></i><b>4.4</b> Predicting a Difference Score</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="mediation.html"><a href="mediation.html"><i class="fa fa-check"></i><b>5</b> Mediation</a></li>
+<li class="chapter" data-level="6" data-path="moderations.html"><a href="moderations.html"><i class="fa fa-check"></i><b>6</b> Moderations</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">URFP Quantitative Project Textbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="within-participant-analysis" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Within-Participant Analysis<a href="within-participant-analysis.html#within-participant-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>There are lots of situations where we might have multiple measures of the same units of analysis. We could imagine measure a car’s efficiency, and then making an upgrade to the engine, and measuring its efficiency after the upgrade. Perhaps we could test a tutoring intervention by giving students a test on a topic, allowing them to get tutored, and then measuring their knowledge post-tutoring session.</p>
+<p>For the example in this chapter, we will focus on the <code>ChickWeight</code> dataset. To keep things simple, we are going to focus on only two timepoints in the dataset. The chunk below selects the rows we want and puts the data in wide form. For each chick, we are interested in its weight at birth and on day 2 of it’s life.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="within-participant-analysis.html#cb24-1" aria-hidden="true" tabindex="-1"></a>chick <span class="ot">=</span> ChickWeight <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href="within-participant-analysis.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Time <span class="sc">%in%</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb24-3"><a href="within-participant-analysis.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb24-4"><a href="within-participant-analysis.html#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> <span class="st">&#39;Time&#39;</span>,</span>
+<span id="cb24-5"><a href="within-participant-analysis.html#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_prefix =</span> <span class="st">&#39;weight_&#39;</span>,</span>
+<span id="cb24-6"><a href="within-participant-analysis.html#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> <span class="st">&#39;weight&#39;</span>,</span>
+<span id="cb24-7"><a href="within-participant-analysis.html#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">id_cols =</span> <span class="fu">c</span>(<span class="st">&#39;Chick&#39;</span>, <span class="st">&#39;Diet&#39;</span>)</span>
+<span id="cb24-8"><a href="within-participant-analysis.html#cb24-8" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<p>Here’s what the first few rows of the data look like:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="within-participant-analysis.html#cb25-1" aria-hidden="true" tabindex="-1"></a>chick <span class="sc">%&gt;%</span> </span>
+<span id="cb25-2"><a href="within-participant-analysis.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb25-3"><a href="within-participant-analysis.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flextable</span>()</span></code></pre></div>
+<div class="tabwid"><style>.cl-ebec23fc{}.cl-ebdbb918{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-ebe192fc{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ebe19310{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ebe1b34a{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ebe1b354{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ebe1b35e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ebe1b368{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ebe1b369{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ebe1b372{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-ebec23fc'><thead><tr style="overflow-wrap:break-word;"><th class="cl-ebe1b34a"><p class="cl-ebe192fc"><span class="cl-ebdbb918">Chick</span></p></th><th class="cl-ebe1b34a"><p class="cl-ebe192fc"><span class="cl-ebdbb918">Diet</span></p></th><th class="cl-ebe1b354"><p class="cl-ebe19310"><span class="cl-ebdbb918">weight_0</span></p></th><th class="cl-ebe1b354"><p class="cl-ebe19310"><span class="cl-ebdbb918">weight_2</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">1</span></p></td><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">1</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">42</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">51</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">2</span></p></td><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">1</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">40</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">49</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">3</span></p></td><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">1</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">43</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">39</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">4</span></p></td><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">1</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">42</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">49</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">5</span></p></td><td class="cl-ebe1b35e"><p class="cl-ebe192fc"><span class="cl-ebdbb918">1</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">41</span></p></td><td class="cl-ebe1b368"><p class="cl-ebe19310"><span class="cl-ebdbb918">42</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ebe1b369"><p class="cl-ebe192fc"><span class="cl-ebdbb918">6</span></p></td><td class="cl-ebe1b369"><p class="cl-ebe192fc"><span class="cl-ebdbb918">1</span></p></td><td class="cl-ebe1b372"><p class="cl-ebe19310"><span class="cl-ebdbb918">41</span></p></td><td class="cl-ebe1b372"><p class="cl-ebe19310"><span class="cl-ebdbb918">49</span></p></td></tr></tbody></table></div>
+<div id="computing-difference-scores" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Computing Difference Scores<a href="within-participant-analysis.html#computing-difference-scores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Our primary interest is whether chicks weigh more, on average, on day 2 than on day 0. We have all the tools we need to answer this question from Chapter <a href="regression.html#regression">3</a>, with one exception.</p>
+<p>Notice that in the regression chapter, we had a single variable, MPG, as the outcome. Here, we have two variables we are dealing with: a weight on day 0, and a weight on day 2 (<code>weight_0</code> and <code>weight_2</code> respectively).</p>
+<p>What we really want is a variable that shows the extent to which a chick weighs more on day 2 than on day 0. It is simple to calculate this variable: we simply subtract <code>weight_0</code> from <code>weight_2</code> for each chick. Take a look at the result:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="within-participant-analysis.html#cb26-1" aria-hidden="true" tabindex="-1"></a>chick_2 <span class="ot">=</span> chick <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="within-participant-analysis.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb26-3"><a href="within-participant-analysis.html#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">weight_diff =</span> weight_2 <span class="sc">-</span> weight_0</span>
+<span id="cb26-4"><a href="within-participant-analysis.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb26-5"><a href="within-participant-analysis.html#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="within-participant-analysis.html#cb26-6" aria-hidden="true" tabindex="-1"></a>chick_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb26-7"><a href="within-participant-analysis.html#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">flextable</span>()</span></code></pre></div>
+<div class="tabwid"><style>.cl-ec15a65a{}.cl-ec06335a{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-ec0c8854{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ec0c8868{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ec0ca942{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ec0ca94c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ec0ca956{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ec0ca957{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ec0ca960{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ec0ca961{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-ec15a65a'><thead><tr style="overflow-wrap:break-word;"><th class="cl-ec0ca942"><p class="cl-ec0c8854"><span class="cl-ec06335a">Chick</span></p></th><th class="cl-ec0ca942"><p class="cl-ec0c8854"><span class="cl-ec06335a">Diet</span></p></th><th class="cl-ec0ca94c"><p class="cl-ec0c8868"><span class="cl-ec06335a">weight_0</span></p></th><th class="cl-ec0ca94c"><p class="cl-ec0c8868"><span class="cl-ec06335a">weight_2</span></p></th><th class="cl-ec0ca94c"><p class="cl-ec0c8868"><span class="cl-ec06335a">weight_diff</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">1</span></p></td><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">1</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">42</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">51</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">9</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">2</span></p></td><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">1</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">40</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">49</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">9</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">3</span></p></td><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">1</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">43</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">39</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">-4</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">4</span></p></td><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">1</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">42</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">49</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">7</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">5</span></p></td><td class="cl-ec0ca956"><p class="cl-ec0c8854"><span class="cl-ec06335a">1</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">41</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">42</span></p></td><td class="cl-ec0ca957"><p class="cl-ec0c8868"><span class="cl-ec06335a">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ec0ca960"><p class="cl-ec0c8854"><span class="cl-ec06335a">6</span></p></td><td class="cl-ec0ca960"><p class="cl-ec0c8854"><span class="cl-ec06335a">1</span></p></td><td class="cl-ec0ca961"><p class="cl-ec0c8868"><span class="cl-ec06335a">41</span></p></td><td class="cl-ec0ca961"><p class="cl-ec0c8868"><span class="cl-ec06335a">49</span></p></td><td class="cl-ec0ca961"><p class="cl-ec0c8868"><span class="cl-ec06335a">8</span></p></td></tr></tbody></table></div>
+<p>We can see that the first chick weighed 9 grams more on day 2 than on day 1. The second chick also weighed 9 grams more on day 2 than 0. The third chick weighed 4 grams <em>less</em> on day 2 than on day 0. We know this because the difference is negative; that only occurs if we subtract a larger number from a smaller one.</p>
+<p>It might seem obvious, but it is worth remembering these rules for interpreting difference scores:</p>
+<ul>
+<li>Positive numbers indicate growth, i.e., larger scores on the second variable than on the first.</li>
+<li>Zero indicates no change at all. The two numbers are equal.</li>
+<li>Negative numbers indicate shrinking, i.e., the first number is larger than the second.</li>
+</ul>
+<p>Note that these rules depend on subtracting in a particular direction. Carefully choose your subraction direction based on the situation of your analysis.</p>
+</div>
+<div id="using-regression" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Using Regression<a href="within-participant-analysis.html#using-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s analyze our chick weight difference scores. We use a slightly different syntax in the following model call. Notice that the model I specify is <code>weight_diff ~ 1</code>. The “1” tells R that we do not have any variables we are using as predictors, but that it should still estimate an intercept for our model.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="within-participant-analysis.html#cb27-1" aria-hidden="true" tabindex="-1"></a>wt_diff_model <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb27-2"><a href="within-participant-analysis.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  weight_diff <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb27-3"><a href="within-participant-analysis.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> chick_2</span>
+<span id="cb27-4"><a href="within-participant-analysis.html#cb27-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb27-5"><a href="within-participant-analysis.html#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="within-participant-analysis.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(wt_diff_model)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = weight_diff ~ 1, data = chick_2)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -12.16  -1.16  -0.16   1.59   5.84 
+## 
+## Coefficients:
+##             Estimate Std. Error t value f value   R^2 Pr(&gt;|t|)    
+## (Intercept)    8.160      0.513  15.907 253.032 0.838   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.627 on 49 degrees of freedom</code></pre>
+<p>Let’s apply our mantras for interpretting regression. We only have an intercept, so here is the interpretation:</p>
+<blockquote>
+<p>On average, chicks weighed 8.16 grams more on day 2 than on day 0, <span class="math inline">\(b = 8.16, F(1, 49) = 253.03, p &lt; .001\)</span></p>
+</blockquote>
+<p>That’s it! In the case of only 2 measurements, difference scores are straightforward to analyze. We simply take the mean of a difference score (via an intercept in regression), statistically test it against zero, and interpret accordingly.</p>
+</div>
+<div id="important-aside-contrast-codes" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Important Aside: Contrast Codes<a href="within-participant-analysis.html#important-aside-contrast-codes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Coming soon.</p>
+</div>
+<div id="predicting-a-difference-score" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Predicting a Difference Score<a href="within-participant-analysis.html#predicting-a-difference-score" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We do not have to be satisfied with a simple difference score analysis. We can also predict our difference score from another variable!</p>
+<p>More coming soon.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mediation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-withinparticipant.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
