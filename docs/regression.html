@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Regression | URFP Quantitative Project Textbook</title>
+  <meta name="description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Regression | URFP Quantitative Project Textbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Regression | URFP Quantitative Project Textbook" />
+  
+  <meta name="twitter:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+<meta name="author" content="Christopher Mellinger, Ph.D." />
+
+
+<meta name="date" content="2023-04-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="basicops.html"/>
+<link rel="next" href="footnotes-and-citations.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">URFP Analysis Textbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#r-help"><i class="fa fa-check"></i><b>1.1</b> R Help</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#using-r-studio"><i class="fa fa-check"></i><b>1.2</b> Using R Studio</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#packages-this-book-uses"><i class="fa fa-check"></i><b>1.3</b> Packages This Book Uses</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a>
+<ul>
+<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="basicops.html"><a href="basicops.html"><i class="fa fa-check"></i><b>3</b> Data Operaions</a></li>
+<li class="chapter" data-level="4" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>4</b> Regression</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="regression.html"><a href="regression.html#what-is-regression"><i class="fa fa-check"></i><b>4.1</b> What Is Regression?</a></li>
+<li class="chapter" data-level="4.2" data-path="regression.html"><a href="regression.html#intepreting-regression-output"><i class="fa fa-check"></i><b>4.2</b> Intepreting Regression Output</a></li>
+<li class="chapter" data-level="4.3" data-path="regression.html"><a href="regression.html#centering"><i class="fa fa-check"></i><b>4.3</b> Centering</a></li>
+<li class="chapter" data-level="4.4" data-path="regression.html"><a href="regression.html#interpreting-regression-with-mean-centered-predictors"><i class="fa fa-check"></i><b>4.4</b> Interpreting Regression with Mean-Centered Predictors</a></li>
+<li class="chapter" data-level="4.5" data-path="regression.html"><a href="regression.html#chapter-takeaways"><i class="fa fa-check"></i><b>4.5</b> Chapter Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
+<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
+<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
+<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
+<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="8" data-path="footnotes-and-citations-1.html"><a href="footnotes-and-citations-1.html"><i class="fa fa-check"></i><b>8</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="footnotes-and-citations-1.html"><a href="footnotes-and-citations-1.html#footnotes-1"><i class="fa fa-check"></i><b>8.1</b> Footnotes</a></li>
+<li class="chapter" data-level="8.2" data-path="footnotes-and-citations-1.html"><a href="footnotes-and-citations-1.html#citations-1"><i class="fa fa-check"></i><b>8.2</b> Citations</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">URFP Quantitative Project Textbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regression" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Regression<a href="regression.html#regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>You likely have seen some regerssion models. This following tutorial focuses on interpretation of each element in a regession that will be important later for moderation or mediation analyses.</p>
+<div id="what-is-regression" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> What Is Regression?<a href="regression.html#what-is-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As a simple example, consider the mtcars dataset. We might be interested in relating two variables, say, the weight of the car in tons and the fuel efficiency in miles per gallon (mpg). The most familiar way to perform this analysis is with Pearsion’s correlation, but it turns out that using regression is totally equivalent. Here’s the code for running that regression in R and seeing the result.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="regression.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I&#39;m making a variable to hold the output of the regression; you should always </span></span>
+<span id="cb6-2"><a href="regression.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># name your variables something informative; if you copy this code, change that</span></span>
+<span id="cb6-3"><a href="regression.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># variable name!</span></span>
+<span id="cb6-4"><a href="regression.html#cb6-4" aria-hidden="true" tabindex="-1"></a>efficiencyModel <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb6-5"><a href="regression.html#cb6-5" aria-hidden="true" tabindex="-1"></a>  mpg <span class="sc">~</span> wt, <span class="co"># specify the model.</span></span>
+<span id="cb6-6"><a href="regression.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mtcars <span class="co"># specify the dataframe that we want to use</span></span>
+<span id="cb6-7"><a href="regression.html#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-8"><a href="regression.html#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="regression.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># now view the result</span></span>
+<span id="cb6-10"><a href="regression.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(efficiencyModel)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ wt, data = mtcars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.5432 -2.3647 -0.1252  1.4096  6.8727 
+## 
+## Coefficients:
+##             Estimate Std. Error  t value  f value   R^2 Pr(&gt;|t|)    
+## (Intercept)  37.2851     1.8776  19.8576 394.3233 0.929  &lt; 2e-16 ***
+## wt           -5.3445     0.5591  -9.5590  91.3753 0.753 1.29e-10 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.046 on 30 degrees of freedom
+## Multiple R-squared:  0.7528, Adjusted R-squared:  0.7446 
+## F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
+<p><code>mtcars</code> is a toy dataset that is loaded in R’s environment by default. You can look its information by using R help: <code>?mtcars</code></p>
+<p>Before I explain what’s going on, I’ll provide a write up of these results. Skim it over and try to get the main gist. By the end of this chapter, we hope to make sense of each piece.</p>
+<blockquote>
+<p>Car efficiency was regressed on car weight to examine the relationship between mass and fuel use. A significant, inverse relationship between efficiency and weight emerged, <span class="math inline">\(b = -5.345, F(1,30) = 91.38, p &lt; .001\)</span>.</p>
+</blockquote>
+<p>Note that the term “significant” here is used differently than its collquial meaning. What that really means in the write up above is “statistically reliable.” We’ll explore that more later.</p>
+<p>Returning to the output,wWhat does it all mean? The model that R estimated for us is actually this:</p>
+<p><span class="math display">\[\widehat{mpg_i} = 37.29 - 5.34 * wt_i\]</span></p>
+<p>We can see our two variables, <code>mpg</code> and <code>wt</code>, in that equation. Notice that each of them has a subscript, <code>i</code>. This shows the fact that we are using data from every single person. We can choose <code>i</code> to represent any given car in the mtcars dataset and apply our equation. Another notable feature is the hat over the <code>mpg</code> variable. That hat represents the fact that we are <em>predicting</em>, or making a guess, for each car’s MPG value via this equation. Finally, there are two number, 37.29 and -5.34. These come from the regression output above. Notice the numbers under the heading, “Estimate” in the table in the middle of the ouptut. One is labelled “Intercept,” and the other “wt.”</p>
+<p>Let’s see what these guesses turn out to be. I’m going to apply this equation to the first several rows in the mtcars dataset. Here are the values we are starting with:</p>
+<div class="tabwid"><style>.cl-7b22cbaa{}.cl-7b16b770{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-7b1bc670{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-7b1bf38e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7b1bf3a2{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7b1bf3a3{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-7b22cbaa'><thead><tr style="overflow-wrap:break-word;"><th class="cl-7b1bf38e"><p class="cl-7b1bc670"><span class="cl-7b16b770">mpg</span></p></th><th class="cl-7b1bf38e"><p class="cl-7b1bc670"><span class="cl-7b16b770">wt</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">21.0</span></p></td><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">2.620</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">21.0</span></p></td><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">2.875</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">22.8</span></p></td><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">2.320</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">21.4</span></p></td><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">3.215</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">18.7</span></p></td><td class="cl-7b1bf3a2"><p class="cl-7b1bc670"><span class="cl-7b16b770">3.440</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b1bf3a3"><p class="cl-7b1bc670"><span class="cl-7b16b770">18.1</span></p></td><td class="cl-7b1bf3a3"><p class="cl-7b1bc670"><span class="cl-7b16b770">3.460</span></p></td></tr></tbody></table></div>
+<p>Let’s use our equation on the very first row. We simply substitute the values in that row for the placeholders in the equation above:</p>
+<p><span class="math display">\[\widehat{mpg_1} = 37.29 - 5.34 * 2.62 = 23.2992\]</span></p>
+<p>Remember, the <span class="math inline">\(\widehat{mpg_1}\)</span> is a <em>predicted</em> mpg, so we do not substitute there. Notice that I replaced the <code>i</code> with a 1 because we are applying our model to the first car in the dataset. We get a prediction of 23.2992 MPG. The actual MPG is listed in the table above as 21.0, so we are off by a little bit. But that’s ok because we are using our regression to summarize this information, not get every number exactly right.</p>
+<p>I can repeat this process for every car in the dataset. Here’s what the first few cars predictions look like:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="regression.html#cb8-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="regression.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mpg, wt) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="regression.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb8-4"><a href="regression.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-5"><a href="regression.html#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calculate our predictions</span></span>
+<span id="cb8-6"><a href="regression.html#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">mpg_hat</span><span class="st">`</span> <span class="ot">=</span> <span class="fl">37.29</span> <span class="sc">-</span> <span class="fl">5.34</span> <span class="sc">*</span> wt</span>
+<span id="cb8-7"><a href="regression.html#cb8-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-8"><a href="regression.html#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flextable</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb8-9"><a href="regression.html#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colformat_double</span>(<span class="at">j =</span> <span class="st">&#39;mpg_hat&#39;</span>, <span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="tabwid"><style>.cl-7b855e64{}.cl-7b79b758{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-7b7ed6d4{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-7b7eff1a{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7b7eff2e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7b7eff38{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-7b855e64'><thead><tr style="overflow-wrap:break-word;"><th class="cl-7b7eff1a"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">mpg</span></p></th><th class="cl-7b7eff1a"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">wt</span></p></th><th class="cl-7b7eff1a"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">mpg_hat</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">21.0</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">2.620</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">23.299</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">21.0</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">2.875</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">21.938</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">22.8</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">2.320</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">24.901</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">21.4</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">3.215</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">20.122</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">18.7</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">3.440</span></p></td><td class="cl-7b7eff2e"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">18.920</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7b7eff38"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">18.1</span></p></td><td class="cl-7b7eff38"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">3.460</span></p></td><td class="cl-7b7eff38"><p class="cl-7b7ed6d4"><span class="cl-7b79b758">18.814</span></p></td></tr></tbody></table></div>
+<p>We know that we can use our equation to calculated estimated mpg values for each car. But why would we do that? Well, we don’t often need the exact predictions. But it is useful to know that the model is trying to do this. Let’s represent the model graphically.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="regression.html#cb9-1" aria-hidden="true" tabindex="-1"></a>wt_mpg_plot <span class="ot">=</span> mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="regression.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb9-3"><a href="regression.html#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)</span>
+<span id="cb9-4"><a href="regression.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="regression.html#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># add points for each actual car</span></span>
+<span id="cb9-6"><a href="regression.html#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add a line with values that are suspiciously familiar:</span></span>
+<span id="cb9-7"><a href="regression.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(</span>
+<span id="cb9-8"><a href="regression.html#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">intercept =</span> <span class="fl">37.29</span>,</span>
+<span id="cb9-9"><a href="regression.html#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">slope =</span> <span class="sc">-</span><span class="fl">5.34</span>, </span>
+<span id="cb9-10"><a href="regression.html#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&#39;blue&#39;</span></span>
+<span id="cb9-11"><a href="regression.html#cb9-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-12"><a href="regression.html#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="regression.html#cb9-13" aria-hidden="true" tabindex="-1"></a>wt_mpg_plot</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>We have exact analogs of everything in the tables above. Each point represents a car’s weight on the x axis, and its efficiency in MPG on the y axis. Finally, the line represents those predicts from before. If you take a particular car’s weight and find the spot directly above it on the blue line, the place on the y-axis directly to the left of the line will be the prediction for that car. I’ll mark that on the next graph for the first car in our dataset.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="regression.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># just adding elements to the same plot we had before</span></span>
+<span id="cb10-2"><a href="regression.html#cb10-2" aria-hidden="true" tabindex="-1"></a>wt_mpg_plot <span class="sc">+</span></span>
+<span id="cb10-3"><a href="regression.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(</span>
+<span id="cb10-4"><a href="regression.html#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="fl">2.62</span>, <span class="co"># the weight of the first car</span></span>
+<span id="cb10-5"><a href="regression.html#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">xend =</span> <span class="fl">2.62</span>, <span class="co"># give it another point to use</span></span>
+<span id="cb10-6"><a href="regression.html#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="fl">23.2992</span>,</span>
+<span id="cb10-7"><a href="regression.html#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&#39;forestgreen&#39;</span></span>
+<span id="cb10-8"><a href="regression.html#cb10-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-9"><a href="regression.html#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(</span>
+<span id="cb10-10"><a href="regression.html#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="dv">0</span>, <span class="co"># the weight of the first car</span></span>
+<span id="cb10-11"><a href="regression.html#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">xend =</span> <span class="fl">2.62</span>, <span class="co"># give it another point to use</span></span>
+<span id="cb10-12"><a href="regression.html#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="fl">23.2992</span>, <span class="at">yend =</span> <span class="fl">23.2992</span>,</span>
+<span id="cb10-13"><a href="regression.html#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&#39;forestgreen&#39;</span></span>
+<span id="cb10-14"><a href="regression.html#cb10-14" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Notice that the vertical green line passes right through the point for the first car in our dataset. If we follow the horizontal green line from its intersection with the blue line, we end up at our prediction for the first car.</p>
+<p>The takeaway here is that we can understand our model as describing predictions for each car in the dataset using just two numbers. I’m going to formally give these names and interpretations now:</p>
+<ul>
+<li>The <strong>intercept</strong> tells us the predicted efficiency of a car that has a weight of zero.</li>
+<li>The <strong>slope</strong> tells us how much we expect efficiency to change for a 1-ton weight difference.</li>
+</ul>
+<p>These interpretations are critical. We’ll grapple with them more soon, but for now, I’ll repeat them in more general language. These two things should become mantras for you as you interpret regressions:</p>
+<ul>
+<li>The <strong>intercept</strong> is the predicted value of an outcome for those cases with a value of zero on all predictors.</li>
+<li>The <strong>slope</strong> is the predicted change in the value of the outcome for a 1 unit change in the value of its predictor.</li>
+</ul>
+<p>And finally, one more time, very concretely with the mtcars dataset:</p>
+<ul>
+<li>Our intercept of 37.29 is the predicted efficiency, in miles per gallon, of a car that weighs 0 tons. Obviously a car can’t weigh zero tons, so this value is not particularly meaningful for us in this model. We will change that soon.</li>
+<li>The slope of -5.34 tells us that if car B weighs 1 ton more than car A, car B is predicted to have an efficiency of 5.34 mpg less than car A. There is a negative relationship between car weight and car efficiency in this sample.</li>
+</ul>
+<p>Now that we have interpretations of these pieces of the model, let’s look at some other ways we can leverage this technique.</p>
+</div>
+<div id="intepreting-regression-output" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Intepreting Regression Output<a href="regression.html#intepreting-regression-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here’s the output again.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="regression.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(efficiencyModel)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ wt, data = mtcars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.5432 -2.3647 -0.1252  1.4096  6.8727 
+## 
+## Coefficients:
+##             Estimate Std. Error  t value  f value   R^2 Pr(&gt;|t|)    
+## (Intercept)  37.2851     1.8776  19.8576 394.3233 0.929  &lt; 2e-16 ***
+## wt           -5.3445     0.5591  -9.5590  91.3753 0.753 1.29e-10 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.046 on 30 degrees of freedom
+## Multiple R-squared:  0.7528, Adjusted R-squared:  0.7446 
+## F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
+<p>We’ve looked at the “Estimate” column and now know that those values describe a set of predictions using an intercept and a slope. Let’s take a look at two other columns that will be useful for us.</p>
+<p>The first is labelled “f value.” Descriving the precise meaning of F is outside the scope of this article, but know that it indexes the statistical precision that our model brings. Remember how our model’s predictions were never precisely the real values? F is one way of understanding something about how accurate<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> those predictions were, taking into account model complexity. Larger F values mean our model was more accurate. Values of around 3 or 4 are usually statistically significant, though that depends somewhat on sample size. Our F of more than 90 in this case tells us that we have a model that is quite good, at least in an inferential sense. We derive confidence<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> in the fact that we have a negative relationship between efficiency and weight.</p>
+<p>The second column we examine is labelled “Pr(&gt;|t|)” which is a mathematical way of saying “p value.” I am not going to reiterate the null hypothesis statistical test framework here. Instead, I’ll refer you to the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635437/#:~:text=The%20Null%20Hypothesis%20Significance%20Testing,based%20on%20a%20given%20observation.">another explanation</a> of this if you want the in depth look.</p>
+<p>In the meantime, let me give you interpretations of p that are correct, and those that are not. Here are good ways to describe p:</p>
+<ul>
+<li>Our low p-value of less than .001 indicates that under a null hypothesis of no association between efficiency and car weight, it is unlikely that we would see a set of cars that look this way from sampling error alone.</li>
+<li>Consider a hypothetical world in which the correlation between MPG and car weight was 0. That is, if we could measure all existing cars’ weights and efficiencies, we would see no indication of a relationship between those two variables. In this hypothetical world, it’s unlikely that we would get a set of cars showing the negative association if we randomly sampled just 32 cars. Because there’s a low chance of that happening (p&lt;.001), we might assume that we are not in the hypothetical world with no association; the only possibility left is that we are in a world where there <em>is</em> a relationship bewteen efficiency and weight.</li>
+</ul>
+<p>Here’s some ways that people commonly describe p values, but they are not totally accurate. The incorrect statement is italicized, and then my explanation is in normal font.</p>
+<ul>
+<li><em>Our low p value indicates that there’s a low chance that our F value is due to random chance.</em> This is accurate only if you mean “sampling error under the null hypothesis” when you say “random chance.” But “random chance” could mean a lot of things, so I don’t love it.</li>
+<li><em>The p value is the probability that our data are random.</em> In a strict sense, all data in a sample are random as long as the sampling procedure had some element of randomness to it. And for an accurate study, randomness is essential. If we don’t randomly sample, then we cannot have confidence that our result generalizes. But now we’re deep in the weeds of generalizability theory, and we don’t need to stay here. Basically, this way of describing a p value is not right.</li>
+</ul>
+<p>Ok, so what should you do with p values? Revist my write up above. By convention, we simply note whether p is less than .05. If so, we consider ourselve to have “enough evidence” that we conclude an effect. If not, we are still in the dark; our study was not precise enough to speak to the reality.</p>
+</div>
+<div id="centering" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Centering<a href="regression.html#centering" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We know now that the intercept is the predicted value when the other predictor is zero. Wouldn’t it be nice if we had a way to make “0” a meaningful value? Enter variable centering.</p>
+<p>Consider our plot from before, without the line.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="regression.html#cb13-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="regression.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb13-3"><a href="regression.html#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)</span>
+<span id="cb13-4"><a href="regression.html#cb13-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-5"><a href="regression.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Zero does not even appear on the x axis because there are no cars with a weight of zero. But watch what happens when I subtract a constant from <code>wt</code>:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="regression.html#cb14-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="regression.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-3"><a href="regression.html#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">new_wt =</span> wt <span class="sc">-</span> <span class="dv">2</span> <span class="co"># subtract a constant, 2, from wt</span></span>
+<span id="cb14-4"><a href="regression.html#cb14-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-5"><a href="regression.html#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb14-6"><a href="regression.html#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> new_wt, <span class="at">y =</span> mpg)</span>
+<span id="cb14-7"><a href="regression.html#cb14-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-8"><a href="regression.html#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>Visually, it looks identical if you ignore the x axis. But comparing the x axis, there is a big difference. Let’s put them side by side so we can see it:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="regression.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
+<span id="cb15-2"><a href="regression.html#cb15-2" aria-hidden="true" tabindex="-1"></a>  mtcars <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">panel=</span><span class="st">&quot;wt&quot;</span>),</span>
+<span id="cb15-3"><a href="regression.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  mtcars <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">wt =</span> wt <span class="sc">-</span> <span class="dv">2</span>, <span class="at">panel=</span><span class="st">&quot;wt - 2&quot;</span>)</span>
+<span id="cb15-4"><a href="regression.html#cb15-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-5"><a href="regression.html#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb15-6"><a href="regression.html#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)</span>
+<span id="cb15-7"><a href="regression.html#cb15-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb15-8"><a href="regression.html#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb15-9"><a href="regression.html#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb15-10"><a href="regression.html#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">vars</span>(panel),</span>
+<span id="cb15-11"><a href="regression.html#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow =</span> <span class="dv">2</span>,</span>
+<span id="cb15-12"><a href="regression.html#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale =</span> <span class="st">&quot;free_x&quot;</span></span>
+<span id="cb15-13"><a href="regression.html#cb15-13" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>The x-axis has shifted, but the <em>relative</em> position of points is identical in the two plots. This is an important feature! Notice what happens when we draw a line through those two plots. I will use a slightly different method here, but the line will appear the same as above:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="regression.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
+<span id="cb16-2"><a href="regression.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  mtcars <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">panel=</span><span class="st">&quot;wt&quot;</span>),</span>
+<span id="cb16-3"><a href="regression.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  mtcars <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">wt =</span> wt <span class="sc">-</span> <span class="dv">2</span>, <span class="at">panel=</span><span class="st">&quot;wt - 2&quot;</span>)</span>
+<span id="cb16-4"><a href="regression.html#cb16-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-5"><a href="regression.html#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb16-6"><a href="regression.html#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)</span>
+<span id="cb16-7"><a href="regression.html#cb16-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-8"><a href="regression.html#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb16-9"><a href="regression.html#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>) <span class="sc">+</span></span>
+<span id="cb16-10"><a href="regression.html#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb16-11"><a href="regression.html#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">vars</span>(panel),</span>
+<span id="cb16-12"><a href="regression.html#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow =</span> <span class="dv">2</span>,</span>
+<span id="cb16-13"><a href="regression.html#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale =</span> <span class="st">&quot;free_x&quot;</span></span>
+<span id="cb16-14"><a href="regression.html#cb16-14" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>Just like the data points, the line looks identical! The only difference is the placement of the x-axis. The axis has been shifted to the right in the <code>wt-2</code> plot relative to the <code>wt</code> plot.</p>
+<p>Recall that the relationship between efficiency and weight is estimated in the slope. This key; we centered our variable by subtracting a constant, but the slope of the best-fit line remains unchanged. That is, we can assess the relationship between our variables in exactly the same way as before, by examining the slope.</p>
+<p>The final feature of this shift that is critical for our purpose is the way we control the zero point of the axis. Notice that the value 2 in the original <code>wt</code> data aligns with the new <code>wt-2</code> data value of 0. This is not a coincidence. We subtracted 2, and our new data now has a value of 0 at what use to be 2. In fact, we can intentionally alter where zero lands in our data by subtracting the number we want represented by 0.</p>
+<p>For example, a very interesting value that we will often subtract is the mean of the data we are centering. This strategy is known as <strong>mean centering</strong> a variable. We will rely on this extensively in the next chapter, so it is worth understanding!</p>
+<p>To mean-center our weight variable, we can simply do this:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="regression.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe called mtcars_2 that we can use </span></span>
+<span id="cb18-2"><a href="regression.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># later.</span></span>
+<span id="cb18-3"><a href="regression.html#cb18-3" aria-hidden="true" tabindex="-1"></a>mtcars_2 <span class="ot">=</span> mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb18-4"><a href="regression.html#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb18-5"><a href="regression.html#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">wt_C =</span> wt <span class="sc">-</span> <span class="fu">mean</span>(wt) <span class="co"># mean center weight</span></span>
+<span id="cb18-6"><a href="regression.html#cb18-6" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<p>The expression <code>mean(wt)</code> results in the mean of all weights in the dataset, that is, it results in a constant value. That constant in our case is 3.217. Let’s graph our values as before.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="regression.html#cb19-1" aria-hidden="true" tabindex="-1"></a>mtcars_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb19-2"><a href="regression.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb19-3"><a href="regression.html#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> wt_C, <span class="at">y =</span> mpg) <span class="co"># use the centered weight variable.</span></span>
+<span id="cb19-4"><a href="regression.html#cb19-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-5"><a href="regression.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>As we have come to expect, the relative position of points remains identical, but 0 falls in a new spot on our x axis. Refer to the earlier plots and you can see that 0 is where the mean, 3.217, used to be.</p>
+</div>
+<div id="interpreting-regression-with-mean-centered-predictors" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Interpreting Regression with Mean-Centered Predictors<a href="regression.html#interpreting-regression-with-mean-centered-predictors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s run a regression and use the tools of interpretation we developed earlier.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="regression.html#cb20-1" aria-hidden="true" tabindex="-1"></a>efficiencyModelWtC <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb20-2"><a href="regression.html#cb20-2" aria-hidden="true" tabindex="-1"></a>  mpg <span class="sc">~</span> wt_C,</span>
+<span id="cb20-3"><a href="regression.html#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mtcars_2</span>
+<span id="cb20-4"><a href="regression.html#cb20-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-5"><a href="regression.html#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="regression.html#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(efficiencyModelWtC)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ wt_C, data = mtcars_2)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.5432 -2.3647 -0.1252  1.4096  6.8727 
+## 
+## Coefficients:
+##              Estimate Std. Error   t value   f value   R^2 Pr(&gt;|t|)    
+## (Intercept)   20.0906     0.5384   37.3126 1392.2290 0.979  &lt; 2e-16 ***
+## wt_C          -5.3445     0.5591   -9.5590   91.3753 0.753 1.29e-10 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.046 on 30 degrees of freedom
+## Multiple R-squared:  0.7528, Adjusted R-squared:  0.7446 
+## F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
+<p>Our syntax did not change at all except to use our new <code>wt_C</code> variable, and our new <code>mtcars_2</code> dataframe. As you might have suspected, the slope is identical to our original model at -5.3445. The F value is also identical at 91.38. The parameters that characterize the relationship between our two variables have remained exactly as they were before, further increasing our confidence that centering our weight variable still allows us to see that a 1 ton difference between two cars results in a prediction of 5.345 fewer MPGs in the heavier car than in the lighter one.</p>
+<p>However, the intercept <em>has</em> changed; it is now 20.091. If we apply our rules of interpretation, we have this:</p>
+<blockquote>
+<p>Cars with 0 on the wt_C variable are predicted to have an efficiency of 20.091 MPG.</p>
+</blockquote>
+<p>What kind of car has a value of 0 on <code>wt_C</code>? We know that shifting our x axis allowed use to place 0 on our new variable at the mean of <code>wt</code> in our original variable. That is, the kind of car that has 0 on <code>wt_C</code> is a car with exactly average weight. We may or may not have an actual car in our dataset that weighs exactly the mean of all other cars, but we are in the business of prediction, so that is ok. Let’s rephrase our interpretation to reflect this fact:</p>
+<blockquote>
+<p>A car of average weight is predicted to have an efficiency of 20.091 MPG.</p>
+</blockquote>
+<p>Recall that the statistical test of the intercept tests whether or not that value, regardless of it interpretability, is different from zero or not. The F value is 1392.23, with a p value of less than .001. As a result, we conclude that our MPG prediction for a car of average weight is reliably different from zero in the population of cars that <code>mtcars</code> sampled from.</p>
+<p>One final connection. Our intercept is now estimated as exactly the mean MPG in our dataset:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="regression.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(mtcars<span class="sc">$</span>mpg)</span></code></pre></div>
+<pre><code>## [1] 20.09062</code></pre>
+<p>If all predictors in a regression are mean-centered, then the intercept necessarily reflects the mean of the outcome variable. In the case of the cars dataset, the statistical conclusion yeilded from this test is a bit obvious: the cars weigh more than zero, on average. However, there are many psychological outcomes where we care very much about whether the average of the outcome deviates from zero. We will see an example where this is one of our critical tests in the next chapter.</p>
+<p>In general, mean-centering predictors usually has no downside.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> If all predictors in a regression<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> are mean-centered, then the intercept becomes much more interpretable, usually.</p>
+</div>
+<div id="chapter-takeaways" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Chapter Takeaways<a href="regression.html#chapter-takeaways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Regression with a single predictor characterizes a dataset by estimating a slope and intercept. These describe a line which can be understood as the model’s predictions for each datapoint and other, hypothetical, datapoints that we did not observe.</li>
+<li>The <strong>slope</strong> is always interpretted as the predicted increase in the outcome variable for a 1-unit increase in the predictor variable.</li>
+<li>The <strong>intercept</strong> is always interpretted as the average value of the outcome variable for a datapoint with a value of zero on the predictor variable(s).</li>
+<li>For our purposes here, we compare the p value to .05. If it is less than .05, we understand that our data (or more extreme data) were unlikely to occur in a hypothetical world where no effect (no relationship for a slope, and the average is not different from zero for an intercept) exists.</li>
+<li>We derive our p value from the F value, which indexes the “accuracy” of our model’s predictions. Usually an F of 3 to 4 is enough to be significant, but this depends on sample size.</li>
+<li>We can choose where zero on our predictor variable lands by centering. Mean centering is usually a useful choice. This might help use interpret our intercept as the mean value of our outcome variable. It can be useful to test this mean value against zero.</li>
+</ul>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Sort of. Really, it is a measure of how much variation we accounted for in our model as compared to a simpler model, e.g., one which sets the slope to zero. So really, it is an index of <em>how much better</em> our model is than one where we don’t try to use the statistic of interest. This gets to be a deep, and sometimes controversial, topic. The description here is intended to give you an intuitive sense of what’s going on. For data analysis in a professional capacity, it is important to get familiar with null hypothesis statistical testing, its philosophy, and alternatives like Bayesian analysis.<a href="regression.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Again, this is an intuitive explanation that sacrifices a lot of nuance and meaning in service of getting off the ground quickly. Confidence is a slippery term, and it is probably not true that we can quantify our confidence in the framework of null hypothesis tests, like the F statistic. But many people still use and expect this statistic to index confidence, and in a practical sense it probably does ok.<a href="regression.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>At least, there is no downside in the kind of models we are discussing here. For more advanced models, like logistic regression or multilevel modeling, great care must be taken in centering.<a href="regression.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>We can certainly have more than one predictor in a regression. You may have encountered this as <em>multiple regression.</em> We will rely on mutliple regression techniques later for both moderation and mediation.<a href="regression.html#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="basicops.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="footnotes-and-citations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-regression.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

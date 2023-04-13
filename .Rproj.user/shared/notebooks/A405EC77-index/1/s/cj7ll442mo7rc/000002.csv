@@ -1,0 +1,30 @@
+"0","title: ""URFP Quantitative Project Textbook""
+author: ""Christopher Mellinger, Ph.D.""
+date: ""`r Sys.Date()`""
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+description: |
+  This ""textbook"" contains a very brief introducion to skills that are needed for the analyses the
+  students planned.
+---
+
+
+
+# Introduction
+
+This book is intended to cover *just* enough statistical content to help students in the Undergraduate Research Fellowship Program (URFP) at the Renée Crown Wellness Institute perform analyses of [UPWARD](https://cmell.github.io/UPWARDMasterMethodsBook/) data. This book covers:
+
+- Basic data operations.
+- Regression.
+- Within-participant analysis of two repeated measures via difference scores and regression.
+- Moderation with regression, allowing both continuous and categorical variables.
+- Mediation.
+
+Each of these topics has been well-documented in other sources. The approach here will be to provide basic examples of useful skills, but then refer the reader to other links that elaborate and provide more foundation.
+
+## R Help
+
+It is helpful to know about R's built-in documentation system. At any point, you can use the console to access manuals for any R function or dataset. Just type:"
+"2","/bin/sh: ---: command not found
+"

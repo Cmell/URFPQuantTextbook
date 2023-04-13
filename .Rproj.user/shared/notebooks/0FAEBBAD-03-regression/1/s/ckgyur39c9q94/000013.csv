@@ -1,0 +1,5 @@
+"0","mtcars_2 %>% "
+"0","  ggplot("
+"0","    aes(x = wt_C, y = mpg) # use the centered weight variable."
+"0","  ) +"
+"0","  geom_point()"

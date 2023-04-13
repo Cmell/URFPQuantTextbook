@@ -1,0 +1,7 @@
+"0","chick_2 = chick %>% "
+"0","  mutate("
+"0","    weight_diff = weight_2 - weight_0"
+"0","  )"
+"0",""
+"0","chick_2 %>% "
+"0","  head() %>% flextable()"

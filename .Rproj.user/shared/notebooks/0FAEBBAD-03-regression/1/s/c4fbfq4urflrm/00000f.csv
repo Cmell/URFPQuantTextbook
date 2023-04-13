@@ -1,0 +1,6 @@
+"0","# Create a new dataframe called mtcars_2 that we can use "
+"0","# later."
+"0","mtcars_2 = mtcars %>% "
+"0","  mutate("
+"0","    wt_C = wt - mean(wt) # mean center weight"
+"0","  )"

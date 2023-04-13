@@ -1,0 +1,7 @@
+# Data Operaions {#basicops}
+
+There is a wealth of information on basic data manipulation available. For the purposes of this project, I highly recommend reading these sections of the [Tidyverse cookbook](https://rstudio-education.github.io/tidyverse-cookbook/):
+
+- [Tidy](https://rstudio-education.github.io/tidyverse-cookbook/tidy.html): sections 6 through 9 will be particularly useful.
+- [Transform](https://rstudio-education.github.io/tidyverse-cookbook/transform-tables.html): sections 1-6, 8-10, 13, 14, adn 23 cover working with tables (tibbles or dataframes); sections 15-18 will be useful for working with varibles inside tables.
+- [Visualize](https://rstudio-education.github.io/tidyverse-cookbook/visualize-data.html): nice compact intro to ggplot, which is the framework I'll use throughout this book.

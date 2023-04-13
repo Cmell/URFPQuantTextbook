@@ -1,0 +1,8 @@
+"0","chick = ChickWeight %>% "
+"0","  filter(Time %in% 0:2) %>% "
+"0","  pivot_wider("
+"0","    names_from = 'Time',"
+"0","    names_prefix = 'weight_',"
+"0","    values_from = 'weight',"
+"0","    id_cols = c('Chick', 'Diet')"
+"0","  )"
