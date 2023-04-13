@@ -10,9 +10,14 @@ centering
 interpreting-regression-with-mean-centered-predictors
 chapter-takeaways
 within-participant-analysis
+example-chick-weights
 computing-difference-scores
 using-regression
-important-aside-contrast-codes
+groupcoding
+contrast-coding-scheme-for-diet
+dummy-coding-scheme-for-diet
 predicting-a-difference-score
+other-possibilities
+chapter-takeaways-1
 mediation
 moderations

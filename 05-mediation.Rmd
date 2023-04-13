@@ -1,3 +1,30 @@
 # Mediation
 
-Coming soon.
+I found an excellent resource online for mediation tests with regression. It is the pdf you can download at the link at the end of this article.
+
+Note, however, that the mediation analysis assumes one thing we have not touched on in this book yet: multiple regression.
+
+Multiple regression is much like "single" regression, except that more than one predictor is entered on the right-hand side of the regression equation. Here's an example, going back to the cars dataset.
+
+```{r}
+mpg_wt_disp_model = lm(
+  mpg ~ wt + disp,
+  data = mtcars
+)
+
+lmSummary(mpg_wt_disp_model)
+```
+
+How do we interpret these values?
+
+It turns out, slopes maintain their interpretation, as do intercepts. Here are interpretations of each parameter:
+
+- The intercept of 34.96 is the average MPG of a car that weighs 0 tons and has 0 displacement (displacement is a measure of engine size).
+- If car A weighs 1 ton more than car B, then car A is predicted to have 3.35 fewer MPG than car B, controlling for displacement.
+- If car A has 1 cubic inch more displacement than car B, then car A is predicted to have .018 fewer MPGs than car B, controlling for weight.
+
+These interpretations are remarkably similar to what we did in Chapter \@ref(regression). It is important, now, to remember that the intercept is the predicted value of the outcome when *all predictors* are 0.
+
+One funny little phrase appears at the end of my interpretations for slopes: "controlling for displacement/weight." When we enter multiple predictors in a regression, we interpret slopes as controlling for all other predictors in the regression. This means that we are looking at the weight slope, but statistically equating all cars on displacement. Likewise, we are looking at the displacement effect, but holding constant car weights (statistically). Thus, the slope for weight in this model is not directly comparable to the slope for weight in the models in Chapter \@ref(regression). Those models asked: "is weight related to efficiency?" This model asks: "is weight related to efficiency if all cars had totally equal displacements?" Both questions are valid, and we will want to ask them in different situations.
+
+Now, go read the mediation lesson: [Mediation analysis PDF](https://web.pdx.edu/~newsomj/semclass/ho_mediation.pdf)

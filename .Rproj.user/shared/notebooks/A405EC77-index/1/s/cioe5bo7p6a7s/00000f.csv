@@ -1,3 +1,3 @@
 "0","# packages we don't need people install"
 "0","library(flextable)"
-"0","library(beeswarm)"
+"0","library(ggbeeswarm)"

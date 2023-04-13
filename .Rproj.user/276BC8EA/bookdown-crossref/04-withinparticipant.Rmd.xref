@@ -1,6 +1,11 @@
 h1:within-participant-analysis Within-Participant Analysis
+h2:example-chick-weights Example: Chick Weights
 h2:computing-difference-scores Computing Difference Scores
 h2:using-regression Using Regression
-h2:important-aside-contrast-codes Important Aside: Contrast Codes
+h2:groupcoding Important Aside: Contrast & Dummy Codes
+h3:contrast-coding-scheme-for-diet Contrast coding scheme for diet
+h3:dummy-coding-scheme-for-diet Dummy coding scheme for diet
 h2:predicting-a-difference-score Predicting a Difference Score
+h2:other-possibilities Other Possibilities
+h2:chapter-takeaways Chapter Takeaways
 
