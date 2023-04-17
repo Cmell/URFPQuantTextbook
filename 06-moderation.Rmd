@@ -55,7 +55,7 @@ Now, let me expand the equation by distributing through the slope quantity and r
 \begin{equation}
 \widehat{mpg_i} = b_0 + b_1 * wtC_i + b_2 * amC_i + b_3 * wtC_i * amC_i
 (\#eq:interaction)
-\eng{equation}
+\end{equation}
 
 This equation represents the way we will write our regressions. There are a few important features that must be present in each interaction model. First, note that both predictors of interest, weight and transmission type, have a term by themselves in the model: $b_1 * wtC_i$ and $b_2 * amC_i$. These are called the main effects of weight and transmission repectively. They ask useful questions. Are weight and transmission type related to efficiency, controlling for the other?
 
