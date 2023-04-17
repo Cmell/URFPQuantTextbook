@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Moderation | URFP Quantitative Project Textbook</title>
+  <meta name="description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Moderation | URFP Quantitative Project Textbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Moderation | URFP Quantitative Project Textbook" />
+  
+  <meta name="twitter:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+<meta name="author" content="Christopher Mellinger, Ph.D." />
+
+
+<meta name="date" content="2023-04-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="mediation.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">URFP Analysis Textbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#r-help"><i class="fa fa-check"></i><b>1.1</b> R Help</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#using-r-studio"><i class="fa fa-check"></i><b>1.2</b> Using R Studio</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#packages-this-book-uses"><i class="fa fa-check"></i><b>1.3</b> Packages This Book Uses</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i><b>1.4</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basicops.html"><a href="basicops.html"><i class="fa fa-check"></i><b>2</b> Data Operaions</a></li>
+<li class="chapter" data-level="3" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>3</b> Regression</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="regression.html"><a href="regression.html#what-is-regression"><i class="fa fa-check"></i><b>3.1</b> What Is Regression?</a></li>
+<li class="chapter" data-level="3.2" data-path="regression.html"><a href="regression.html#intepreting-regression-output"><i class="fa fa-check"></i><b>3.2</b> Intepreting Regression Output</a></li>
+<li class="chapter" data-level="3.3" data-path="regression.html"><a href="regression.html#centering"><i class="fa fa-check"></i><b>3.3</b> Centering</a></li>
+<li class="chapter" data-level="3.4" data-path="regression.html"><a href="regression.html#interpreting-regression-with-mean-centered-predictors"><i class="fa fa-check"></i><b>3.4</b> Interpreting Regression with Mean-Centered Predictors</a></li>
+<li class="chapter" data-level="3.5" data-path="regression.html"><a href="regression.html#chapter-takeaways"><i class="fa fa-check"></i><b>3.5</b> Chapter Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html"><i class="fa fa-check"></i><b>4</b> Within-Participant Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#example-chick-weights"><i class="fa fa-check"></i><b>4.1</b> Example: Chick Weights</a></li>
+<li class="chapter" data-level="4.2" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#computing-difference-scores"><i class="fa fa-check"></i><b>4.2</b> Computing Difference Scores</a></li>
+<li class="chapter" data-level="4.3" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#using-regression"><i class="fa fa-check"></i><b>4.3</b> Using Regression</a></li>
+<li class="chapter" data-level="4.4" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#groupcoding"><i class="fa fa-check"></i><b>4.4</b> Important Aside: Contrast &amp; Dummy Codes</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#contrast-coding-scheme-for-diet"><i class="fa fa-check"></i><b>4.4.1</b> Contrast coding scheme for diet</a></li>
+<li class="chapter" data-level="4.4.2" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#dummy-coding-scheme-for-diet"><i class="fa fa-check"></i><b>4.4.2</b> Dummy coding scheme for diet</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#predicting-a-difference-score"><i class="fa fa-check"></i><b>4.5</b> Predicting a Difference Score</a></li>
+<li class="chapter" data-level="4.6" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#other-possibilities"><i class="fa fa-check"></i><b>4.6</b> Other Possibilities</a></li>
+<li class="chapter" data-level="4.7" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#chapter-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Chapter Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="mediation.html"><a href="mediation.html"><i class="fa fa-check"></i><b>5</b> Mediation</a></li>
+<li class="chapter" data-level="6" data-path="moderation.html"><a href="moderation.html"><i class="fa fa-check"></i><b>6</b> Moderation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="moderation.html"><a href="moderation.html#mathematical-explanation"><i class="fa fa-check"></i><b>6.1</b> Mathematical Explanation</a></li>
+<li class="chapter" data-level="6.2" data-path="moderation.html"><a href="moderation.html#example-model"><i class="fa fa-check"></i><b>6.2</b> Example Model</a></li>
+<li class="chapter" data-level="6.3" data-path="moderation.html"><a href="moderation.html#interpretting-interactions"><i class="fa fa-check"></i><b>6.3</b> Interpretting Interactions</a></li>
+<li class="chapter" data-level="6.4" data-path="moderation.html"><a href="moderation.html#extension-to-continous-moderators"><i class="fa fa-check"></i><b>6.4</b> Extension to Continous Moderators</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">URFP Quantitative Project Textbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="moderation" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Moderation<a href="moderation.html#moderation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Moderation models ask the question: does the relationship between a predictor and the outcome differ based on the level of another predictor?</p>
+<p>Let’s return to the <code>mtcars</code> dataset for this analysis.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="moderation.html#cb42-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">flextable</span>()</span></code></pre></div>
+<div class="tabwid"><style>.cl-58d59ae8{}.cl-58c96eda{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-58cd9a78{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-58cdb634{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58cdb63e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58cdb648{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-58d59ae8'><thead><tr style="overflow-wrap:break-word;"><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">mpg</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">cyl</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">disp</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">hp</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">drat</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">wt</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">qsec</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">vs</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">am</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">gear</span></p></th><th class="cl-58cdb634"><p class="cl-58cd9a78"><span class="cl-58c96eda">carb</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">21.0</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">6</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">160</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">110</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3.90</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">2.620</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">16.46</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">0</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">4</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">4</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">21.0</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">6</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">160</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">110</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3.90</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">2.875</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">17.02</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">0</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">4</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">4</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">22.8</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">4</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">108</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">93</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3.85</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">2.320</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">18.61</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">4</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">21.4</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">6</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">258</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">110</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3.08</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3.215</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">19.44</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">0</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">18.7</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">8</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">360</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">175</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3.15</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3.440</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">17.02</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">0</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">0</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">3</span></p></td><td class="cl-58cdb63e"><p class="cl-58cd9a78"><span class="cl-58c96eda">2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">18.1</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">6</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">225</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">105</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">2.76</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">3.460</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">20.22</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">0</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">3</span></p></td><td class="cl-58cdb648"><p class="cl-58cd9a78"><span class="cl-58c96eda">1</span></p></td></tr></tbody></table></div>
+<p>We’ll focus on predicting efficienby (<code>mpg</code>) from weight again, but we’ll consider whether another feature of the vehicle changes the relatinoship we saw before: the transmission type. The variable <code>am</code> is coded 0 for cars with automatic transmissions and 1 for cars with manual transmissions. We learned about coding schemes in Section <a href="within-participant-analysis.html#groupcoding">4.4</a>. This predictor is currently dummy-coded.</p>
+<p>Recall that we observed a negative relationship between effiency and weight in Chapter <a href="regression.html#regression">3</a>. We will additionally ask: is the inverse relationship the same for cars with automatic transmissions as it is for manual transmissions?</p>
+<p>Before we begin, let’s set up our data just how we want. I’m going to center our weight predictor around the mean so that we can interpret the intercept (and for another reason we’ll see shortly). I’m also going to set up a contrast code for the <code>am</code> variable, as well as the complementary dummy code.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="moderation.html#cb43-1" aria-hidden="true" tabindex="-1"></a>mtcars_3 <span class="ot">=</span> mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb43-2"><a href="moderation.html#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb43-3"><a href="moderation.html#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">wtC =</span> wt <span class="sc">-</span> <span class="fu">mean</span>(wt),</span>
+<span id="cb43-4"><a href="moderation.html#cb43-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb43-5"><a href="moderation.html#cb43-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">amC =</span> <span class="sc">-</span>.<span class="dv">5</span> <span class="sc">*</span> (am<span class="sc">==</span><span class="dv">0</span>) <span class="sc">+</span> .<span class="dv">5</span> <span class="sc">*</span> (am<span class="sc">==</span><span class="dv">1</span>), <span class="co"># -.5 if automatic, +.5 if manual</span></span>
+<span id="cb43-6"><a href="moderation.html#cb43-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">amAuto =</span> <span class="dv">1</span> <span class="sc">*</span>(am<span class="sc">==</span><span class="dv">1</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (am<span class="sc">==</span><span class="dv">1</span>), <span class="co"># redundant, but I want to spell it out</span></span>
+<span id="cb43-7"><a href="moderation.html#cb43-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">amMan =</span> <span class="dv">0</span> <span class="sc">*</span> (am<span class="sc">==</span><span class="dv">1</span>) <span class="sc">+</span> <span class="dv">1</span> <span class="sc">*</span> (am<span class="sc">==</span><span class="dv">0</span>) <span class="co"># the dummy code the other direction</span></span>
+<span id="cb43-8"><a href="moderation.html#cb43-8" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="mathematical-explanation" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Mathematical Explanation<a href="moderation.html#mathematical-explanation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To motivate our strategy, we’ll examine some easy algebra. Here is the model we estimated when there was just one predictor:</p>
+<p><span class="math display" id="eq:basic">\[\begin{equation}
+\widehat{mpg_i} = b_0 + b * wtC_i
+\tag{6.1}
+\end{equation}\]</span></p>
+<p>Take a minute to appreciate the interpretation of that equation. It says that as <span class="math inline">\(wtC_i\)</span> gets larger, <span class="math inline">\(mpg_i\)</span> is also predicted to get larger. The amount by which the two are tied together in their increase is estimated in <span class="math inline">\(b\)</span>. So, the bigger <span class="math inline">\(b\)</span> is, the stronger the relationship between <span class="math inline">\(wtC_i\)</span> and <span class="math inline">\(\widehat{mpg_i}\)</span>.</p>
+<p>The critical thing is that we want the <span class="math inline">\(mpg_i\)</span> ~ <span class="math inline">\(wtC_i\)</span> <em>relationship</em>, which is represented by <span class="math inline">\(b_1\)</span>, to <em>depend</em> on transmission bype, represented by <span class="math inline">\(amC_i\)</span>.</p>
+<p>I’ll rephrase the point. If the relationship between efficiency and weight is encapsulated in the multiplier on weight, we want the multiplier on weight, <span class="math inline">\(b\)</span>, to be a function of transmision type.</p>
+<p>Here’s a way to write that down in an equaion. It might look a bit funky right now, but in a moment we’ll “unfunk” it:</p>
+<p><span class="math display" id="eq:interaction" id="eq:expanded">\[\begin{equation}
+\widehat{mpg_i} = b_0 + (b_1 + b_3 * amC_i) * wtC_i + b_2 * amC_i
+\tag{6.2}
+\end{equation}\]</span></p>
+<p>Notice that equation <a href="moderation.html#eq:expanded">(6.2)</a> has the property we asked for: the multiplier of <span class="math inline">\(wtC_i\)</span> in the parentheses is a function of both <span class="math inline">\(b_1\)</span> and also <span class="math inline">\(amC_i\)</span>. In a practical sense, this means that the larger that <span class="math inline">\(amC_i\)</span> is, the larger the slope for <span class="math inline">\(wtC_i\)</span>. The slope is now “compound,” comprised of a free parameter <span class="math inline">\(b1\)</span> and a parameter that depends on the magnitude of <span class="math inline">\(amC_i\)</span>.</p>
+<p>Now, let me expand the equation by distributing through the slope quantity and re-ordering the terms:</p>
+<p>\begin{equation}
+= b_0 + b_1 * wtC_i + b_2 * amC_i + b_3 * wtC_i * amC_i
+\tag{6.3}
+</p>
+<p>This equation represents the way we will write our regressions. There are a few important features that must be present in each interaction model. First, note that both predictors of interest, weight and transmission type, have a term by themselves in the model: <span class="math inline">\(b_1 * wtC_i\)</span> and <span class="math inline">\(b_2 * amC_i\)</span>. These are called the main effects of weight and transmission repectively. They ask useful questions. Are weight and transmission type related to efficiency, controlling for the other?</p>
+<p>Second, the interaction term is literally the multiplication of weight, transmission type, and the parameter representing the interaction, <span class="math inline">\(b_3 * wtC_i * amC_i\)</span>. The parameter on this term, <span class="math inline">\(b_3\)</span>, will provide a statistical test of whether the relationship between weight and efficiency depends on transmission type.</p>
+<p>Finally, notice that the equation above is completely symetrical with respect to which variable is considered the moderator and which is the “primary predictor.” That is, if we had only looked at equation <a href="moderation.html#eq:interaction">(6.3)</a> we would have no idea if the researcher was condering transmission type to be the moderator of the efficiency-weight relationship, or if weight was moderating the transmission-type-efficiency relationship. This is important: <strong>interactions are symetrical.</strong> When we build this model, we are simultaneously asking whether both whether transmission moderates weight’s influence, and whether weight moderates transmission’s influence on efficiency.</p>
+</div>
+<div id="example-model" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Example Model<a href="moderation.html#example-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s estimate our model according to equation <a href="moderation.html#eq:interaction">(6.3)</a>.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="moderation.html#cb44-1" aria-hidden="true" tabindex="-1"></a>interactionModel <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb44-2"><a href="moderation.html#cb44-2" aria-hidden="true" tabindex="-1"></a>  mpg <span class="sc">~</span> wtC <span class="sc">+</span> amC <span class="sc">+</span> wtC <span class="sc">*</span> amC,</span>
+<span id="cb44-3"><a href="moderation.html#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mtcars_3</span>
+<span id="cb44-4"><a href="moderation.html#cb44-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb44-5"><a href="moderation.html#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="moderation.html#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(interactionModel)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ wtC + amC + wtC * amC, data = mtcars_3)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.6004 -1.5446 -0.5325  0.9012  6.0909 
+## 
+## Coefficients:
+##             Estimate Std. Error  t value  f value   R^2 Pr(&gt;|t|)    
+## (Intercept)  18.1520     0.7094  25.5862 654.6556 0.959  &lt; 2e-16 ***
+## wtC          -6.4351     0.7223  -8.9085  79.3623 0.739 1.16e-09 ***
+## amC          -2.1677     1.4189  -1.5278   2.3341 0.077  0.13779    
+## wtC:amC      -5.2984     1.4447  -3.6674  13.4502 0.324  0.00102 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.591 on 28 degrees of freedom
+## Multiple R-squared:  0.833,  Adjusted R-squared:  0.8151 
+## F-statistic: 46.57 on 3 and 28 DF,  p-value: 5.209e-11</code></pre>
+<p>Let’s interpret the parameters we’ve seen before:</p>
+<ul>
+<li>Intercept: the average (we centered everything, so we’re ok to talk about this as the average) value of car efficiency is 18.15, and this is significantly different from 0, <span class="math inline">\(F(1,28)=654.7, p&lt;.001\)</span>. Of course, no car woulde work if it had an efficiency of 0 MPG, so we are not surprised by this.</li>
+<li>Weight: as weight increases by 1 ton, our model predicts that efficiency decreases by 6.43 MPGs, holding constant transmission type. That relationship is significantly different from 0, <span class="math inline">\(F(1,28)=79.4, p&lt;.001\)</span>. This is close to what we saw in Chapter <a href="regression.html#regression">3</a>.</li>
+<li>Transmission: moving from automatic to manual transmissions (<code>am</code> was contrast coded), our model predicts a difference in -2.17 MPG. That is, our model predicts that manual transmissions are 2.17 MPG more efficient than automatic transmissions. However, this effect did not reach significance, <span class="math inline">\(F(1,28)=2.33, p=.138\)</span>. We do not consider this a reliable effect, and so we have to reserve judgment on whether efficiency is related to transmission type.</li>
+</ul>
+<p>There’s one parameter we have not seen yet: the interaction term, labelled <code>wtC:amC</code> in the output. The parameter shows an estimate of -5.298, and we see that it is significantly different from zero, <span class="math inline">\(F(1,28)=13.45, p=.001\)</span>. Recall that this parameter corresponds to <span class="math inline">\(b_3\)</span> in equation <a href="moderation.html#eq:expanded">(6.2)</a>, which represents the amount that weight’s effect depends on transmission type. The fact that it is significantly different from zero tells us that weight’s effect does, in fact, depend on transmission type!</p>
+</div>
+<div id="interpretting-interactions" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Interpretting Interactions<a href="moderation.html#interpretting-interactions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>But how does the relationship change for each tranmission type? There’s a few ways that interactions can play out. We are going to go back to one our old tricks for this: changing where zero falls for predictors.</p>
+<p>Recall that the “compound” effect of weight in this model is this <span class="math inline">\(b_1 + b_3 * amC_i\)</span>. The implication is that when <span class="math inline">\(amC_i\)</span> is zero, the effect of weight is just <span class="math inline">\(b_1\)</span>. Where is <span class="math inline">\(amC_i\)</span> zero? When we contrast code it, we know that it is zero for an “average” car. In the interpretation of weight above, we looked at the weight effect just that way, and concluded that the average car shows a relationship between weight and efficiency.</p>
+<p>But we also have ways of changing what zero means for our predictors. In the code at the beginning of this chapter, I calculated two dummy code. I’m going to re-estimate the model with the dummy code where automatic transmissions are coded zero.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="moderation.html#cb46-1" aria-hidden="true" tabindex="-1"></a>int_model_auto <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb46-2"><a href="moderation.html#cb46-2" aria-hidden="true" tabindex="-1"></a>  mpg <span class="sc">~</span> wtC <span class="sc">+</span> amAuto <span class="sc">+</span> wtC <span class="sc">*</span> amAuto,</span>
+<span id="cb46-3"><a href="moderation.html#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mtcars_3</span>
+<span id="cb46-4"><a href="moderation.html#cb46-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-5"><a href="moderation.html#cb46-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-6"><a href="moderation.html#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(int_model_auto)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ wtC + amAuto + wtC * amAuto, data = mtcars_3)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.6004 -1.5446 -0.5325  0.9012  6.0909 
+## 
+## Coefficients:
+##             Estimate Std. Error  t value  f value   R^2 Pr(&gt;|t|)    
+## (Intercept)  19.2358     0.7357  26.1469 683.6581 0.961  &lt; 2e-16 ***
+## wtC          -3.7859     0.7856  -4.8188  23.2212 0.453 4.55e-05 ***
+## amAuto       -2.1677     1.4189  -1.5278   2.3341 0.077  0.13779    
+## wtC:amAuto   -5.2984     1.4447  -3.6674  13.4502 0.324  0.00102 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.591 on 28 degrees of freedom
+## Multiple R-squared:  0.833,  Adjusted R-squared:  0.8151 
+## F-statistic: 46.57 on 3 and 28 DF,  p-value: 5.209e-11</code></pre>
+<p>There are two parameter interpretations we neeed to change. Notice that the interaction term and the <code>amAuto</code> term have exactly the same magnitudes as in the original model. That’s because changing the zero point of <code>am</code> does not affect those terms, but it does affect the slope for weight and the intercept.</p>
+<ul>
+<li>Intercept: For cars with automatic transmissions and average weight, the model predicts an efficiency of 19.2 MPG (still significantly different from zero).</li>
+<li>Weight: for cars with automatic transmissions, the model predicts that car efficiency decreases by 3.78 MPG for every 1 ton weight increase, <span class="math inline">\(F(1,28)=23.22, p&lt;.001\)</span>. This relationship is significant for cars with automatic transmissions.</li>
+</ul>
+<p>We have a way to focus our model on a particular kind of car! Let’s focus it on cars with manual transmissions.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="moderation.html#cb48-1" aria-hidden="true" tabindex="-1"></a>int_model_man <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb48-2"><a href="moderation.html#cb48-2" aria-hidden="true" tabindex="-1"></a>  mpg <span class="sc">~</span> wtC <span class="sc">+</span> amMan <span class="sc">+</span> wtC <span class="sc">*</span> amMan,</span>
+<span id="cb48-3"><a href="moderation.html#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mtcars_3</span>
+<span id="cb48-4"><a href="moderation.html#cb48-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb48-5"><a href="moderation.html#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="moderation.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(int_model_man)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ wtC + amMan + wtC * amMan, data = mtcars_3)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.6004 -1.5446 -0.5325  0.9012  6.0909 
+## 
+## Coefficients:
+##             Estimate Std. Error t value f value   R^2 Pr(&gt;|t|)    
+## (Intercept)   17.068      1.213  14.068 197.907 0.876 3.21e-14 ***
+## wtC           -9.084      1.212  -7.493  56.142 0.667 3.68e-08 ***
+## amMan          2.168      1.419   1.528   2.334 0.077  0.13779    
+## wtC:amMan      5.298      1.445   3.667  13.450 0.324  0.00102 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.591 on 28 degrees of freedom
+## Multiple R-squared:  0.833,  Adjusted R-squared:  0.8151 
+## F-statistic: 46.57 on 3 and 28 DF,  p-value: 5.209e-11</code></pre>
+<ul>
+<li>Intercept: cars with manual transmissions and average weight are predicted to have efficiency of 17.07 MPG (signficantly different from zero).</li>
+<li>Weight: cars with manual transmissions are predicted to decrease in efficiency by 9.08 MPG for every 1 ton increase in weight, <span class="math inline">\(F(1,28)=56.14, p&lt;.001\)</span>. The relationship between weight and effiency for cars with manual transmissions is significant.</li>
+</ul>
+<p>In fact, using the slopes from those two models (but keeping the intercept from the first model), I can put lines on a graph that represent these trends:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="moderation.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="do">## ggplot likes to have dataframes for things, so I contruct one here with the </span></span>
+<span id="cb50-2"><a href="moderation.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="do">## slopes and intercepts I want</span></span>
+<span id="cb50-3"><a href="moderation.html#cb50-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-4"><a href="moderation.html#cb50-4" aria-hidden="true" tabindex="-1"></a>plotTbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb50-5"><a href="moderation.html#cb50-5" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span> Transmission,   <span class="sc">~</span> int,    <span class="sc">~</span> slp,</span>
+<span id="cb50-6"><a href="moderation.html#cb50-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Automatic&quot;</span>,      <span class="fl">19.2358</span>,      <span class="sc">-</span><span class="fl">3.786</span>,</span>
+<span id="cb50-7"><a href="moderation.html#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Manual&quot;</span>,         <span class="fl">17.068</span>,      <span class="sc">-</span><span class="fl">9.084</span>,</span>
+<span id="cb50-8"><a href="moderation.html#cb50-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;On Average&quot;</span>,     <span class="fl">18.15</span>,      <span class="sc">-</span><span class="fl">6.435</span></span>
+<span id="cb50-9"><a href="moderation.html#cb50-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb50-10"><a href="moderation.html#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Intercepts come from the &quot;on average&quot; model, and then we use the different</span></span>
+<span id="cb50-11"><a href="moderation.html#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="co"># slopes estimated for the different groups</span></span>
+<span id="cb50-12"><a href="moderation.html#cb50-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-13"><a href="moderation.html#cb50-13" aria-hidden="true" tabindex="-1"></a>mtcars_3 <span class="sc">%&gt;%</span> </span>
+<span id="cb50-14"><a href="moderation.html#cb50-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb50-15"><a href="moderation.html#cb50-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> wtC, <span class="at">y =</span> mpg)</span>
+<span id="cb50-16"><a href="moderation.html#cb50-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb50-17"><a href="moderation.html#cb50-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb50-18"><a href="moderation.html#cb50-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>( <span class="co"># automatic transmisions</span></span>
+<span id="cb50-19"><a href="moderation.html#cb50-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">intercept =</span> int, <span class="at">slope =</span> slp, <span class="at">color =</span> Transmission),</span>
+<span id="cb50-20"><a href="moderation.html#cb50-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> plotTbl</span>
+<span id="cb50-21"><a href="moderation.html#cb50-21" aria-hidden="true" tabindex="-1"></a>  ) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>Now we can see that the plot confirms our interpretations. The red line, representing cars with automatic transmissions, shows a weaker relationship (flatter slope) between weight and efficiency than the green line, representing manual transmissions. Averaging those in the blue line shows a slope somewhere in between.</p>
+<p>Running the two models with dummy codes is known as exploring <strong>simple effects.</strong> Here, we explored the simple effect of weight on MPG for each transmission category separately.</p>
+</div>
+<div id="extension-to-continous-moderators" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Extension to Continous Moderators<a href="moderation.html#extension-to-continous-moderators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The really powerful thing about using regression for this analysis is that we do not need to care so much about whether our predictors are categorical or continuous. In most introductory statistics courses, it is taught that you can have categorical variables interact with an ANOVA. If you have a variable that is continuously valued and one that is categorical, then you need “ANCOVA.” But I’ll claim here that these are all actuall the same model. ANOVA is exactly equivalent to contrast-coding predictors and entering them in a regression, with two main effects and an interaction term. ANCOVA is what we just did in this example.</p>
+<p>Finally, it is not a problem to allow two variables, both continuously valued, to interact! We do need to think about where zero is in the same way as before. So, mean center your predictors, and enter them in the model just like we did above. To explore the simple effects, we conceptually do the same thing, but we can’t construct dummy codes for continuous variables. Instead, it is common practice to center one of the interacting variables at 1 standard deviation above the mean, and then again at 1 standard deviation below the mean. Then, estimate the simple effects models like I estimated the dummy-coded ones here. Interpret accordingly!</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="mediation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-moderation.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

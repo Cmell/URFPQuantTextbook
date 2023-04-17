@@ -1,7 +1,11 @@
+eq:basic
+eq:expanded
+eq:interaction
 introduction
 r-help
 using-r-studio
 packages-this-book-uses
+sources
 basicops
 regression
 what-is-regression
@@ -20,4 +24,8 @@ predicting-a-difference-score
 other-possibilities
 chapter-takeaways-1
 mediation
-moderations
+moderation
+mathematical-explanation
+example-model
+interpretting-interactions
+extension-to-continous-moderators

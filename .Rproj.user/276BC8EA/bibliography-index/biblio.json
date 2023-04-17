@@ -24,6 +24,36 @@
             "type": "book"
         },
         {
+            "author": [
+                {
+                    "family": "Judd",
+                    "given": "Charles M."
+                },
+                {
+                    "family": "McClelland",
+                    "given": "Gary H."
+                },
+                {
+                    "family": "Ryan",
+                    "given": "Carey S."
+                }
+            ],
+            "edition": "3rd",
+            "id": "judd_data_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "Routledge",
+            "publisher-place": "New York, NY",
+            "title": "Data analysis: A model comparison approach",
+            "title-short": "Data analysis",
+            "type": "book"
+        },
+        {
             "URL": "https://www.R-project.org/",
             "author": [
                 {

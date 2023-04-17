@@ -26,14 +26,14 @@ students planned.</p>" />
 <meta name="author" content="Christopher Mellinger, Ph.D." />
 
 
-<meta name="date" content="2023-04-13" />
+<meta name="date" content="2023-04-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="moderations.html"/>
+<link rel="prev" href="moderation.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -122,6 +122,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -144,6 +166,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#r-help"><i class="fa fa-check"></i><b>1.1</b> R Help</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#using-r-studio"><i class="fa fa-check"></i><b>1.2</b> Using R Studio</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#packages-this-book-uses"><i class="fa fa-check"></i><b>1.3</b> Packages This Book Uses</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i><b>1.4</b> Sources</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="basicops.html"><a href="basicops.html"><i class="fa fa-check"></i><b>2</b> Data Operaions</a></li>
 <li class="chapter" data-level="3" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>3</b> Regression</a>
@@ -169,7 +192,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.7" data-path="within-participant-analysis.html"><a href="within-participant-analysis.html#chapter-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Chapter Takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="mediation.html"><a href="mediation.html"><i class="fa fa-check"></i><b>5</b> Mediation</a></li>
-<li class="chapter" data-level="6" data-path="moderations.html"><a href="moderations.html"><i class="fa fa-check"></i><b>6</b> Moderations</a></li>
+<li class="chapter" data-level="6" data-path="moderation.html"><a href="moderation.html"><i class="fa fa-check"></i><b>6</b> Moderation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="moderation.html"><a href="moderation.html#mathematical-explanation"><i class="fa fa-check"></i><b>6.1</b> Mathematical Explanation</a></li>
+<li class="chapter" data-level="6.2" data-path="moderation.html"><a href="moderation.html#example-model"><i class="fa fa-check"></i><b>6.2</b> Example Model</a></li>
+<li class="chapter" data-level="6.3" data-path="moderation.html"><a href="moderation.html#interpretting-interactions"><i class="fa fa-check"></i><b>6.3</b> Interpretting Interactions</a></li>
+<li class="chapter" data-level="6.4" data-path="moderation.html"><a href="moderation.html#extension-to-continous-moderators"><i class="fa fa-check"></i><b>6.4</b> Extension to Continous Moderators</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
@@ -191,6 +220,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="references" class="section level1 unnumbered hasAnchor">
 <h1>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Judd, Charles M., Gary H. McClelland, and Carey S. Ryan. 2017. <em>Data Analysis: <span>A</span> Model Comparison Approach</em>. 3rd ed. New York, NY: Routledge.
+</div>
+<div class="csl-entry">
+Melllinger, Chris. 2022. <em>CMUtils: Utility Functions i Often Use</em>.
+</div>
+<div class="csl-entry">
+Wickham, Hadley. 2023. <em>Tidyverse: Easily Install and Load the Tidyverse</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
+</div>
+<div class="csl-entry">
+Xie, Yihui. 2022. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.
+</div>
+</div>
 </div>
 
 
@@ -208,7 +251,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="moderations.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="moderation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

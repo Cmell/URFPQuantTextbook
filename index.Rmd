@@ -69,7 +69,11 @@ install.packages('devtools')
 devtools::install_github('Cmell/CMUtils')
 ```
 
-```{r, include =F}
+## Sources
+
+This book was created with the packages above as well as bookdown [@R-CMUtils; @R-bookdown, @R-tidyverse]. The methods presented here are largely based on the model comparison approach to statistical analysis [@judd_data_2017].
+
+```{r, include=F}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
