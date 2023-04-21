@@ -1,0 +1,149 @@
+# Addendum: Dummy Codes for More Than 2 Groups
+
+In Section \@ref(groupcoding), we discussed contrast and dummy codes for two-level variables. However, there are many situations where a variable might have more than two levels. A very common social science example is personal identity. Most dimensions have more than two levels that take no particular order. For race and ethnicity, we might have Black, South Asian, East Asian, Native American, White, and multi-racial individuals in a sample. For gender, we might have women, men, non-binary, two-spirity, and those who don't identify with any particular grouping. For each of these, we need a way to analyze an outcome by the levels of these predictors.
+
+In this chapter, I will only cover dummy codes. This limits us quite a bit for models involving interactions, but dummy codes are common and fairly intuitive. To illustrate a dummy code, let's look at the `mtcars` dataset again. The variable `gear` provides the number of forward gears that each car has. For the purposes of this example, we'll assume that we do not know if the number of gears is ordered in any way for the purposes of our analysis.
+
+## Assigning Codes
+
+For categorical variables with more than two levels, we will need more than one code. In general, the number of codes required to represent a set of categories is one less than the number of categories. For the example in Chapter \@ref(withinp), there were only two levels of diet condition, so we only needed one code. But here, we have three levels, so we will need two codes.
+
+The way we construct the codes is to set one group to 0 across all codes in the set. Then, each group gets a code where it is assigned 1, and everything else gets a zero. In table format, here is what our codes will look like:
+
+```{r, echo=F}
+tribble(
+       ~`3-gear cars`, ~`4-gear cars`,  ~`5-gear cars`,
+              0,             1,               0,
+              0,            0,                1            
+) %>% 
+  flextable()
+```
+
+We usually want to give our codes name. See the r code below for how I do this. I define three different versions of our code, which we can use later for various purposes.
+
+```{r}
+mtcars_analysis = mtcars %>% 
+  mutate(
+    # dummy codes for gears. I'm naming it for the level of the factor that is 
+    # always coded zero
+    gear_dumTriple_1 = 0 * (gear==3) + 1 * (gear==4) + 0 * (gear==5),
+    gear_dumTriple_2 = 0 * (gear==3) + 0 * (gear==4) + 1 * (gear==5),
+    
+    # A different set of codes, with 4-gear cars always coded zero.
+    gear_dumQuad_1 = 1 * (gear==3) + 0 * (gear==4) + 0 * (gear==5),
+    gear_dumQuad_2 = 0 * (gear==3) + 0 * (gear==4) + 1 * (gear==5),
+    
+    # a final set with 5-gear cars coded zero
+    
+    gear_dumQuin_1 = 1 * (gear==3) + 0 * (gear==4) + 0 * (gear==5),
+    gear_dumQuin_2 = 0 * (gear==3) + 1 * (gear==4) + 0 * (gear==5),
+    
+    # I also want centered weight so we can ask about it:
+    wtC = wt - mean(wt),
+    wtHi = wtC - sd(wt),
+    wtLo = wtC - (-sd(wt))
+  )
+```
+
+## Analyzing with Codes
+
+To perform a traditional one-way ANOVA, we simply enter all the codes from any complete set.
+
+```{r}
+oneWayTripleModel = lm(
+  mpg ~ gear_dumTriple_1 + gear_dumTriple_2,
+  data = mtcars_analysis
+)
+
+lmSummary(oneWayTripleModel)
+```
+
+Let's apply our interpretation mantras:
+
+- Intercept: the intercept represents the average predicted value on MPG for cars which score zero on all predictors. In this case, the `gear_dumTripl` set of variables always coded cars with three gears as zero. So the intercept of 16.11 is the average MPG for cars with three gears, and this is significantly different from zero, $b = 16.11, F(1,29)=175.6, p<.001$.
+- `gear_dumtriple_1` slope: for each one-unit increase in the predictor, 8.427 MPG more is predicted by the model. For this code, cars with 4 gears are coded 1, and all other cars are coded 0. An increase in one unit on this scale means going from cars with 3 or 5 gears to cars with 4 gears. The model predicts that cars with 4 gears have significantly more efficiency than cars with 3 or 4 gears, $b=8.427, F(1,29)=21.4, p<.001$, specificlaly by 8.427 MPG.
+- `gear_dumTriple_2` is coded 0 for cars with 3 or 4 gears and 1 for cars with 5 gears. Going from 0 to 1 on this predictor means comparing all cars without 5 gears to all cars with 5 gears. Our model predicts that cars wtih 5 gears have 5.273 more MPG than cars wtih 3 or 4 gears, a statistically significant difference, $b = 5.273, F(1,29)=4.71, p=.038$.
+
+Notice that dummy codes set up comparisons of one category to all other categories. The group that is always coded zero is never compared by itself to all other cars. Instead, this group gets the special status that the intercept is estimated as its average, and compared statistically to zero. In the model above, we find that cars with 3 gears have a non-zero efficiency, which is a bit silly. But we also see that cars with 4 gears are better, on average, than other cars, and cars with 5 gears on average are also better than lumping other cars together. We might infer that cars with 3 gears are probably poor as a result, but to statistically check this we need to run the same model with but another set of codes.
+
+```{r}
+oneWayQuadModel = lm(
+  mpg ~ gear_dumQuad_1 + gear_dumQuad_2,
+  data = mtcars_analysis
+)
+
+lmSummary(oneWayQuadModel)
+```
+
+Interpret!
+
+- Intercept: cars with 4 gears (always coded zero on the `gear_dumQuad` code set) have an average efficiency of 24.533 MPG, which is significantly above zero, $b=24.533, F(1, 29)=325.85, p<.001$.
+- `gear_dumQuad_1` slope: cars with 3 gears have, on average, 8.427 MPG less than cars with 4 or 5 gears (lumped together as a group), a significant difference in efficiency, $b=-8.427, F(1,29)=21.36, p<.001$.
+- As an excerise, I'll leave the interpretation of `gear_dumQuad_2` to the reader. Which two groups of cars does this code compare?
+
+## Moderation with Dummy Codes
+
+Just like contrast codes, we can examine moderation for dummy codes. The same rules apply. The one thing that might look different is how the interaction is set up. Examine the model below.
+
+```{r}
+weightTripleGearModel = lm(
+  mpg ~ wtC + gear_dumTriple_1 + wtC * gear_dumTriple_1 + wtC * gear_dumTriple_2,
+  data = mtcars_analysis
+)
+
+lmSummary(weightTripleGearModel)
+```
+
+Exactly the same interpretation rules apply. The intercept is still the predicted value for a car that has zero on all predictors. As an exercise, what kind of car has zero on all predictors? See the footnote for the answer.^[A car with zero on `wtC` is a car of average weight. The dummy code set always codes cars with 3 gears as 0, so our car here is a 3-gear car of average weight.] The `wtC` predictor is a lower-order predictor here (because it is in an interaction), so we interpret it as a the weight effect for a car coded zero in our dummy codes.
+
+- Cars with 3 gears showed a significant weight effect, such that 1 ton more mass is predicted to reduce efficiency by 3.257 MPG, $b=3.257, F(1,26)=15.26, p<.001$.
+- I'll skip the dummy code interpretations, but remember that they are also the effect of the predictor for a car that has a value of zero on `wtC`.
+- `wtC:gear_dumTriple_1`: The `wtC` effect is 3.707 units lower for cars with 4 gears than for cars with 3 and 5 gears, indiciated a significant interaction, $b= -3.707, F(1, 26)=6.56, p=.017$.
+- `wtC:gear_dumTriple_2`: The `wtC` effect is 4.890 units lower for cars with 5 gears than for cars with 3 and 4 gears, indiciated a significant interaction, $b= -4.890, F(1, 26)=7.92, p=.009$.
+
+So we have significant evidence of interaction! Note that we would have evidence of interaction if even one of the two interaction terms emerged; we don't need both.
+
+Notice that if we switched out our code set, we would be examinign the effect of weight for a different set of cars. For example, what cars would the weight effect represent if we used the `gear_dumQuad` set?^[The `gear_dumQuad` set of codes always assigns 0 to cars with 4 gears. In a model with `wtC`, the quad set of codes, and their interaction terms, the `wtC` effect would represent the predicted increase in MPG for a 1 ton increase in weight, but specifically in cars with 4 gears.]
+
+## Other Handy Functions
+
+When you are looking at multiple category variables, you might want a way to summarize the results. Here's a handy and quick way using tidyverse. This assumes we are interested in two factors, number of gears and transmission type.
+
+```{r}
+mtcars_analysis %>% 
+  group_by(gear, am) %>% 
+  summarize(
+    Mean = mean(mpg),
+    SD = sd(mpg)
+  ) 
+```
+
+
+```{r, eval=F, echo=F, include=F}
+weightQuadGearModel = lm(
+  mpg ~ wtC * gear_dumQuad_1 + wtC * gear_dumQuad_2,
+  data = mtcars_analysis
+)
+weightQuinGearModel = lm(
+  mpg ~ wtC * gear_dumQuin_1 + wtC * gear_dumQuin_2,
+  data = mtcars_analysis
+)
+
+parTable = tribble(
+  ~ Gears,    ~ int,                                        ~wtSlope,
+  '3', coef(weightTripleGearModel)['(Intercept)'], coef(weightTripleGearModel)['wtC'],
+  '4', coef(weightQuadGearModel)['(Intercept)'], coef(weightQuadGearModel)['wtC'],
+  '5', coef(weightQuinGearModel)['(Intercept)'], coef(weightQuinGearModel)['wtC'],
+)
+
+mtcars_analysis %>% 
+  ggplot(
+    aes(x = wtC, y = mpg)
+  ) +
+  geom_point() +
+  geom_abline(
+    aes(intercept = int, slope = wtSlope, color = Gears),
+    data = parTable
+  )
+```
+

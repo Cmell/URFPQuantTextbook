@@ -13,7 +13,7 @@ intepreting-regression-output
 centering
 interpreting-regression-with-mean-centered-predictors
 chapter-takeaways
-within-participant-analysis
+withinp
 example-chick-weights
 computing-difference-scores
 using-regression
@@ -29,3 +29,8 @@ mathematical-explanation
 example-model
 interpretting-interactions
 extension-to-continous-moderators
+addendum-dummy-codes-for-more-than-2-groups
+assigning-codes
+analyzing-with-codes
+moderation-with-dummy-codes
+other-handy-functions

@@ -28,3 +28,5 @@ These interpretations are remarkably similar to what we did in Chapter \@ref(reg
 One funny little phrase appears at the end of my interpretations for slopes: "controlling for displacement/weight." When we enter multiple predictors in a regression, we interpret slopes as controlling for all other predictors in the regression. This means that we are looking at the weight slope, but statistically equating all cars on displacement. Likewise, we are looking at the displacement effect, but holding constant car weights (statistically). Thus, the slope for weight in this model is not directly comparable to the slope for weight in the models in Chapter \@ref(regression). Those models asked: "is weight related to efficiency?" This model asks: "is weight related to efficiency if all cars had totally equal displacements?" Both questions are valid, and we will want to ask them in different situations.
 
 Now, go read the mediation lesson: [Mediation analysis PDF](https://web.pdx.edu/~newsomj/semclass/ho_mediation.pdf)
+
+

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Within-Participant Analysis | URFP Quantitative Project Textbook</title>
+  <meta name="description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Within-Participant Analysis | URFP Quantitative Project Textbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Within-Participant Analysis | URFP Quantitative Project Textbook" />
+  
+  <meta name="twitter:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+<meta name="author" content="Christopher Mellinger, Ph.D." />
+
+
+<meta name="date" content="2023-04-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="regression.html"/>
+<link rel="next" href="mediation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">URFP Analysis Textbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#r-help"><i class="fa fa-check"></i><b>1.1</b> R Help</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#using-r-studio"><i class="fa fa-check"></i><b>1.2</b> Using R Studio</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#packages-this-book-uses"><i class="fa fa-check"></i><b>1.3</b> Packages This Book Uses</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i><b>1.4</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basicops.html"><a href="basicops.html"><i class="fa fa-check"></i><b>2</b> Data Operaions</a></li>
+<li class="chapter" data-level="3" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>3</b> Regression</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="regression.html"><a href="regression.html#what-is-regression"><i class="fa fa-check"></i><b>3.1</b> What Is Regression?</a></li>
+<li class="chapter" data-level="3.2" data-path="regression.html"><a href="regression.html#intepreting-regression-output"><i class="fa fa-check"></i><b>3.2</b> Intepreting Regression Output</a></li>
+<li class="chapter" data-level="3.3" data-path="regression.html"><a href="regression.html#centering"><i class="fa fa-check"></i><b>3.3</b> Centering</a></li>
+<li class="chapter" data-level="3.4" data-path="regression.html"><a href="regression.html#interpreting-regression-with-mean-centered-predictors"><i class="fa fa-check"></i><b>3.4</b> Interpreting Regression with Mean-Centered Predictors</a></li>
+<li class="chapter" data-level="3.5" data-path="regression.html"><a href="regression.html#chapter-takeaways"><i class="fa fa-check"></i><b>3.5</b> Chapter Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="withinp.html"><a href="withinp.html"><i class="fa fa-check"></i><b>4</b> Within-Participant Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="withinp.html"><a href="withinp.html#example-chick-weights"><i class="fa fa-check"></i><b>4.1</b> Example: Chick Weights</a></li>
+<li class="chapter" data-level="4.2" data-path="withinp.html"><a href="withinp.html#computing-difference-scores"><i class="fa fa-check"></i><b>4.2</b> Computing Difference Scores</a></li>
+<li class="chapter" data-level="4.3" data-path="withinp.html"><a href="withinp.html#using-regression"><i class="fa fa-check"></i><b>4.3</b> Using Regression</a></li>
+<li class="chapter" data-level="4.4" data-path="withinp.html"><a href="withinp.html#groupcoding"><i class="fa fa-check"></i><b>4.4</b> Important Aside: Contrast &amp; Dummy Codes</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="withinp.html"><a href="withinp.html#contrast-coding-scheme-for-diet"><i class="fa fa-check"></i><b>4.4.1</b> Contrast coding scheme for diet</a></li>
+<li class="chapter" data-level="4.4.2" data-path="withinp.html"><a href="withinp.html#dummy-coding-scheme-for-diet"><i class="fa fa-check"></i><b>4.4.2</b> Dummy coding scheme for diet</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="withinp.html"><a href="withinp.html#predicting-a-difference-score"><i class="fa fa-check"></i><b>4.5</b> Predicting a Difference Score</a></li>
+<li class="chapter" data-level="4.6" data-path="withinp.html"><a href="withinp.html#other-possibilities"><i class="fa fa-check"></i><b>4.6</b> Other Possibilities</a></li>
+<li class="chapter" data-level="4.7" data-path="withinp.html"><a href="withinp.html#chapter-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Chapter Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="mediation.html"><a href="mediation.html"><i class="fa fa-check"></i><b>5</b> Mediation</a></li>
+<li class="chapter" data-level="6" data-path="moderation.html"><a href="moderation.html"><i class="fa fa-check"></i><b>6</b> Moderation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="moderation.html"><a href="moderation.html#mathematical-explanation"><i class="fa fa-check"></i><b>6.1</b> Mathematical Explanation</a></li>
+<li class="chapter" data-level="6.2" data-path="moderation.html"><a href="moderation.html#example-model"><i class="fa fa-check"></i><b>6.2</b> Example Model</a></li>
+<li class="chapter" data-level="6.3" data-path="moderation.html"><a href="moderation.html#interpretting-interactions"><i class="fa fa-check"></i><b>6.3</b> Interpretting Interactions</a></li>
+<li class="chapter" data-level="6.4" data-path="moderation.html"><a href="moderation.html#extension-to-continous-moderators"><i class="fa fa-check"></i><b>6.4</b> Extension to Continous Moderators</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html"><i class="fa fa-check"></i><b>7</b> Addendum: Dummy Codes for More Than 2 Groups</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html#assigning-codes"><i class="fa fa-check"></i><b>7.1</b> Assigning Codes</a></li>
+<li class="chapter" data-level="7.2" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html#analyzing-with-codes"><i class="fa fa-check"></i><b>7.2</b> Analyzing with Codes</a></li>
+<li class="chapter" data-level="7.3" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html#moderation-with-dummy-codes"><i class="fa fa-check"></i><b>7.3</b> Moderation with Dummy Codes</a></li>
+<li class="chapter" data-level="7.4" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html#other-handy-functions"><i class="fa fa-check"></i><b>7.4</b> Other Handy Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">URFP Quantitative Project Textbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="withinp" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Within-Participant Analysis<a href="withinp.html#withinp" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>There are lots of situations where we might have multiple measures of the same units of analysis. We could imagine measure a car’s efficiency, and then making an upgrade to the engine, and measuring its efficiency after the upgrade. Perhaps we could test a tutoring intervention by giving students a test on a topic, allowing them to get tutored, and then measuring their knowledge post-tutoring session.</p>
+<p>To be precise, we typically think of independent variables as either varying <strong>within</strong> participants or <strong>between</strong> participants. Variables that vary within participants imply more than one measurement of a variable. In the tutoring example, students had to take the test twice, once before and once after the tutoring session. We could describe our analysis this way:</p>
+<blockquote>
+<p>We examined student test scores by timepoint (before tutoring vs. after tutoring), which varied within partipants.</p>
+</blockquote>
+<p>In contrast, variables that vary between participants have only one value for each person/unit. Consider modifying the tutoring study. Let’s make it an experiment in which participants are randomly assigned to receive tutoring or not. Then we give the test to all students. Some students have the value “tutored” on the condition variable, while others have the value “control.” We would describe our analysis of this between-student variable this way:</p>
+<blockquote>
+<p>We examined student test scores by condition (tutored vs. control), which varied between participants.</p>
+</blockquote>
+<p>There are also <em>mixed designs</em>, where some factors (i.e., variables) vary between participants and some vary within. UPWARD is a mixed design. The primary indepedent variable in UPWARD was condition. Some participants were assigned to receive Mindfulness-Based Cognitive Therapy (MBCT) while other were assigned to Usual Care (UC). However, participants were also measure on several outcomes at many different timepoints. Participants completed the PHQ-9 many times so that the researchers knew their depressive symptom burden across the course of the study. If we analyze both time and condition, we could describe the analysis this way:</p>
+<blockquote>
+<p>We analyzed depressive symptom burden via PHQ-9 scores in a 2 (time: pre-intervention vs. post-intervention) x 2 (condition: MBCT vs. UC) analysis, with the first factor varying within participants and the second varying between.</p>
+</blockquote>
+<p>This kind of description is very common. The numbers refer to how many <em>levels</em> there are in a factor (i.e., variable) in the design. The “x” can be read as “by,” so the statement could be rephrased this way: “Our analysis was a 2 by 2 design.”</p>
+<p>We are going to unpack all of this as we go through this chapter.</p>
+<div id="example-chick-weights" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Example: Chick Weights<a href="withinp.html#example-chick-weights" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For the example in this chapter, we will focus on the <code>ChickWeight</code> dataset. To keep things simple, we are going to focus on only two timepoints in the dataset. The chunk below selects the rows we want and puts the data in wide form. For each chick, we are interested in its weight at birth and on day 2 of it’s life.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="withinp.html#cb24-1" aria-hidden="true" tabindex="-1"></a>chick <span class="ot">=</span> ChickWeight <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href="withinp.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Time <span class="sc">%in%</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb24-3"><a href="withinp.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb24-4"><a href="withinp.html#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> <span class="st">&#39;Time&#39;</span>,</span>
+<span id="cb24-5"><a href="withinp.html#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_prefix =</span> <span class="st">&#39;weight_&#39;</span>,</span>
+<span id="cb24-6"><a href="withinp.html#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> <span class="st">&#39;weight&#39;</span>,</span>
+<span id="cb24-7"><a href="withinp.html#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">id_cols =</span> <span class="fu">c</span>(<span class="st">&#39;Chick&#39;</span>, <span class="st">&#39;Diet&#39;</span>)</span>
+<span id="cb24-8"><a href="withinp.html#cb24-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb24-9"><a href="withinp.html#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb24-10"><a href="withinp.html#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">Diet =</span> <span class="fu">ifelse</span>(</span>
+<span id="cb24-11"><a href="withinp.html#cb24-11" aria-hidden="true" tabindex="-1"></a>      Diet <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,</span>
+<span id="cb24-12"><a href="withinp.html#cb24-12" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>,</span>
+<span id="cb24-13"><a href="withinp.html#cb24-13" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span></span>
+<span id="cb24-14"><a href="withinp.html#cb24-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb24-15"><a href="withinp.html#cb24-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<p>In this study, researchers measured the weight of baby chickens (chicks) many times. They also varied the diet that those chicks consumed. The study included facotrs that varied both within chicks (time) and between chicks (diet; there were 4 diets in the original data but we will collapse that to 2 diets to keep things simple). Here’s what the first few rows of the data look like:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="withinp.html#cb25-1" aria-hidden="true" tabindex="-1"></a>chick <span class="sc">%&gt;%</span> </span>
+<span id="cb25-2"><a href="withinp.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb25-3"><a href="withinp.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flextable</span>()</span></code></pre></div>
+<div class="tabwid"><style>.cl-5d2ad71c{}.cl-5d1db726{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5d22088a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5d220894{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5d223422{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d22342c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d223436{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d223440{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d22344a{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d22344b{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-5d2ad71c'><thead><tr style="overflow-wrap:break-word;"><th class="cl-5d223422"><p class="cl-5d22088a"><span class="cl-5d1db726">Chick</span></p></th><th class="cl-5d22342c"><p class="cl-5d220894"><span class="cl-5d1db726">Diet</span></p></th><th class="cl-5d22342c"><p class="cl-5d220894"><span class="cl-5d1db726">weight_0</span></p></th><th class="cl-5d22342c"><p class="cl-5d220894"><span class="cl-5d1db726">weight_2</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-5d223436"><p class="cl-5d22088a"><span class="cl-5d1db726">1</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">1</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">42</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">51</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d223436"><p class="cl-5d22088a"><span class="cl-5d1db726">2</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">1</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">40</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">49</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d223436"><p class="cl-5d22088a"><span class="cl-5d1db726">3</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">1</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">43</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">39</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d223436"><p class="cl-5d22088a"><span class="cl-5d1db726">4</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">1</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">42</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">49</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d223436"><p class="cl-5d22088a"><span class="cl-5d1db726">5</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">1</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">41</span></p></td><td class="cl-5d223440"><p class="cl-5d220894"><span class="cl-5d1db726">42</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d22344a"><p class="cl-5d22088a"><span class="cl-5d1db726">6</span></p></td><td class="cl-5d22344b"><p class="cl-5d220894"><span class="cl-5d1db726">1</span></p></td><td class="cl-5d22344b"><p class="cl-5d220894"><span class="cl-5d1db726">41</span></p></td><td class="cl-5d22344b"><p class="cl-5d220894"><span class="cl-5d1db726">49</span></p></td></tr></tbody></table></div>
+</div>
+<div id="computing-difference-scores" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Computing Difference Scores<a href="withinp.html#computing-difference-scores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Our primary interest is whether chicks weigh more, on average, on day 2 than on day 0. We have all the tools we need to answer this question from Chapter <a href="regression.html#regression">3</a>, with one exception.</p>
+<p>Notice that in the regression chapter, we had a single variable, MPG, as the outcome. Here, we have two variables we are dealing with: a weight on day 0, and a weight on day 2 (<code>weight_0</code> and <code>weight_2</code> respectively).</p>
+<p>What we really want is a variable that shows the extent to which a chick weighs more on day 2 than on day 0. It is simple to calculate this variable: we simply subtract <code>weight_0</code> from <code>weight_2</code> for each chick. Take a look at the result:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="withinp.html#cb26-1" aria-hidden="true" tabindex="-1"></a>chick_2 <span class="ot">=</span> chick <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="withinp.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb26-3"><a href="withinp.html#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">weight_diff =</span> weight_2 <span class="sc">-</span> weight_0</span>
+<span id="cb26-4"><a href="withinp.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb26-5"><a href="withinp.html#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="withinp.html#cb26-6" aria-hidden="true" tabindex="-1"></a>chick_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb26-7"><a href="withinp.html#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">flextable</span>()</span></code></pre></div>
+<div class="tabwid"><style>.cl-5d47e53c{}.cl-5d3d960e{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5d41f230{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5d41f244{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5d420a90{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d420a9a{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d420a9b{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d420a9c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d420aa4{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d420aa5{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-5d47e53c'><thead><tr style="overflow-wrap:break-word;"><th class="cl-5d420a90"><p class="cl-5d41f230"><span class="cl-5d3d960e">Chick</span></p></th><th class="cl-5d420a9a"><p class="cl-5d41f244"><span class="cl-5d3d960e">Diet</span></p></th><th class="cl-5d420a9a"><p class="cl-5d41f244"><span class="cl-5d3d960e">weight_0</span></p></th><th class="cl-5d420a9a"><p class="cl-5d41f244"><span class="cl-5d3d960e">weight_2</span></p></th><th class="cl-5d420a9a"><p class="cl-5d41f244"><span class="cl-5d3d960e">weight_diff</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-5d420a9b"><p class="cl-5d41f230"><span class="cl-5d3d960e">1</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">1</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">42</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">51</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">9</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d420a9b"><p class="cl-5d41f230"><span class="cl-5d3d960e">2</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">1</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">40</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">49</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">9</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d420a9b"><p class="cl-5d41f230"><span class="cl-5d3d960e">3</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">1</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">43</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">39</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">-4</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d420a9b"><p class="cl-5d41f230"><span class="cl-5d3d960e">4</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">1</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">42</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">49</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">7</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d420a9b"><p class="cl-5d41f230"><span class="cl-5d3d960e">5</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">1</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">41</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">42</span></p></td><td class="cl-5d420a9c"><p class="cl-5d41f244"><span class="cl-5d3d960e">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d420aa4"><p class="cl-5d41f230"><span class="cl-5d3d960e">6</span></p></td><td class="cl-5d420aa5"><p class="cl-5d41f244"><span class="cl-5d3d960e">1</span></p></td><td class="cl-5d420aa5"><p class="cl-5d41f244"><span class="cl-5d3d960e">41</span></p></td><td class="cl-5d420aa5"><p class="cl-5d41f244"><span class="cl-5d3d960e">49</span></p></td><td class="cl-5d420aa5"><p class="cl-5d41f244"><span class="cl-5d3d960e">8</span></p></td></tr></tbody></table></div>
+<p>We can see that the first chick weighed 9 grams more on day 2 than on day 1. The second chick also weighed 9 grams more on day 2 than 0. The third chick weighed 4 grams <em>less</em> on day 2 than on day 0. We know this because the difference is negative; that only occurs if we subtract a larger number from a smaller one.</p>
+<p>It might seem obvious, but it is worth remembering these rules for interpreting difference scores:</p>
+<ul>
+<li>Positive numbers indicate growth, i.e., larger scores on the second variable than on the first.</li>
+<li>Zero indicates no change at all. The two numbers are equal.</li>
+<li>Negative numbers indicate shrinking, i.e., the first number is larger than the second.</li>
+</ul>
+<p>Note that these rules depend on subtracting in a particular direction. Carefully choose your subraction direction based on the situation of your analysis.</p>
+</div>
+<div id="using-regression" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Using Regression<a href="withinp.html#using-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s analyze our chick weight difference scores. We use a slightly different syntax in the following model call. jNotice that the model I specify is <code>weight_diff ~ 1</code>. The “1” tells R that we do not have any variables we are using as predictors, but that it should still estimate an intercept for our model.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="withinp.html#cb27-1" aria-hidden="true" tabindex="-1"></a>wt_diff_model <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb27-2"><a href="withinp.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  weight_diff <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb27-3"><a href="withinp.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> chick_2</span>
+<span id="cb27-4"><a href="withinp.html#cb27-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb27-5"><a href="withinp.html#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="withinp.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(wt_diff_model)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = weight_diff ~ 1, data = chick_2)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -12.16  -1.16  -0.16   1.59   5.84 
+## 
+## Coefficients:
+##             Estimate Std. Error t value f value   R^2 Pr(&gt;|t|)    
+## (Intercept)    8.160      0.513  15.907 253.032 0.838   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.627 on 49 degrees of freedom</code></pre>
+<p>Let’s apply our mantras for interpretting regression. We only have an intercept, so here is the interpretation:</p>
+<blockquote>
+<p>On average, chicks weighed 8.16 grams more on day 2 than on day 0, <span class="math inline">\(b = 8.16, F(1, 49) = 253.03, p &lt; .001\)</span></p>
+</blockquote>
+<p>That’s it! In the case of only 2 measurements, difference scores are straightforward to analyze. We simply take the mean of a difference score (via an intercept in regression), statistically test it against zero, and interpret accordingly.</p>
+</div>
+<div id="groupcoding" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Important Aside: Contrast &amp; Dummy Codes<a href="withinp.html#groupcoding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that our chicks were fed one of two diets, labelled diet 1 and diet 2. We might want to know if chicks on one of those diets grew more than chicks on another diet. Notice that with our regression strategy, we need all our variables to be represented as numbers. In this particular dataset, the diets are already represented as numbers, but there’s at least two reason we want to recode. First, we want to choose clever values for our codes so that our regression output is asking specific questions of our data. Second, not all datasets come pre-coded with values; many will have character strings or boolean values (TRUE/FALSE) that encode condition, and we’ll need to replace them anyway.</p>
+<p>Let’s see how many people we have in each condition:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="withinp.html#cb29-1" aria-hidden="true" tabindex="-1"></a>chick_2 <span class="sc">%&gt;%</span> <span class="fu">count</span>(Diet) <span class="sc">%&gt;%</span> </span>
+<span id="cb29-2"><a href="withinp.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flextable</span>()</span></code></pre></div>
+<div class="tabwid"><style>.cl-5d608510{}.cl-5d569910{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5d5bbeb8{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5d5bd2c2{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d5bd2cc{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5d5bd2cd{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-5d608510'><thead><tr style="overflow-wrap:break-word;"><th class="cl-5d5bd2c2"><p class="cl-5d5bbeb8"><span class="cl-5d569910">Diet</span></p></th><th class="cl-5d5bd2c2"><p class="cl-5d5bbeb8"><span class="cl-5d569910">n</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-5d5bd2cc"><p class="cl-5d5bbeb8"><span class="cl-5d569910">1</span></p></td><td class="cl-5d5bd2cc"><p class="cl-5d5bbeb8"><span class="cl-5d569910">30</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5d5bd2cd"><p class="cl-5d5bbeb8"><span class="cl-5d569910">2</span></p></td><td class="cl-5d5bd2cd"><p class="cl-5d5bbeb8"><span class="cl-5d569910">20</span></p></td></tr></tbody></table></div>
+<p>We will use two different coding schemes: contrast codes and dummy codes. The primary difference in these coding schemes is where zero ends up. That’s critical for any analysis in which we want to interpret the intercept.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<div id="contrast-coding-scheme-for-diet" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Contrast coding scheme for diet<a href="withinp.html#contrast-coding-scheme-for-diet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+dietContrast =
+\begin{cases}
+  -.5       &amp; \quad \text{if diet 1}\\
+  +.5       &amp; \quad \text{if diet 2}
+\end{cases}
+\]</span></p>
+<p>To make this happen, here is a common coding motif that works well for recoding.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="withinp.html#cb30-1" aria-hidden="true" tabindex="-1"></a>chick_3 <span class="ot">&lt;-</span> chick_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb30-2"><a href="withinp.html#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb30-3"><a href="withinp.html#cb30-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">dietContrast =</span> <span class="sc">-</span>.<span class="dv">5</span> <span class="sc">*</span> (Diet<span class="sc">==</span><span class="dv">1</span>) <span class="sc">+</span> .<span class="dv">5</span> <span class="sc">*</span> (Diet<span class="sc">==</span><span class="dv">2</span>)</span>
+<span id="cb30-4"><a href="withinp.html#cb30-4" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<p>This code works because both of the expressions in parenthese, <code>(Diet==1)</code> and <code>(Diet==2)</code>, actually evaluate to logical vectors (try this code in your console if you are curious: <code>ChickWeight$Diet==1</code>). That’s why the double-equals sign is there. A <code>TRUE</code> value to a computer is equivalent to 1, where a <code>FALSE</code> value is equivalent to zero. By multiplying our codes against this vector of <code>TRUE/FALSE</code> or 0/1, we end up with the code when the expression is true and a 0 when the expression is false. Adding them together, each row will get the right value.</p>
+<p>Zero, in this scheme, falls approximately at the average of our chicks. This depends somewhat on how balanced our dataset is. In this case, we have 20 chicks in one condition and 30 in the other, so it won’t be precisely the average. But it is close enough to ask the statistical question, “is the intercept different from zero for chicks on average?”</p>
+</div>
+<div id="dummy-coding-scheme-for-diet" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Dummy coding scheme for diet<a href="withinp.html#dummy-coding-scheme-for-diet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For dummy coding schemes, we always assign one of the groups to zero and the other to one.</p>
+<p><span class="math display">\[
+dietDummy1 =
+\begin{cases}
+  0       &amp; \quad \text{if diet 1}\\
+  +1       &amp; \quad \text{if diet 2}
+\end{cases}
+\]</span></p>
+<p>I like to name my dummy coded variables after the group that is coded zero because I know I will interpret the intercept as estimated for that group. Other people have different preferences, and you might see some people name their variables after the group coded 1 (which has advantages in certain situations).</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="withinp.html#cb31-1" aria-hidden="true" tabindex="-1"></a>chick_4 <span class="ot">&lt;-</span> chick_3 <span class="sc">%&gt;%</span> </span>
+<span id="cb31-2"><a href="withinp.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb31-3"><a href="withinp.html#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">dietDummy1 =</span> <span class="dv">0</span> <span class="sc">*</span> (Diet<span class="sc">==</span><span class="dv">1</span>) <span class="sc">+</span> <span class="dv">1</span> <span class="sc">*</span> (Diet<span class="sc">==</span><span class="dv">2</span>),</span>
+<span id="cb31-4"><a href="withinp.html#cb31-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb31-5"><a href="withinp.html#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># we might also want to go the other direction</span></span>
+<span id="cb31-6"><a href="withinp.html#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">dietDummy2 =</span> <span class="dv">1</span> <span class="sc">*</span> (Diet<span class="sc">==</span><span class="dv">1</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (Diet<span class="sc">==</span><span class="dv">2</span>)</span>
+<span id="cb31-7"><a href="withinp.html#cb31-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+</div>
+</div>
+<div id="predicting-a-difference-score" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Predicting a Difference Score<a href="withinp.html#predicting-a-difference-score" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We do not have to be satisfied with a simple difference score analysis. We can also predict our difference score from another variable!</p>
+<p>For this example, we are going to predict our difference score with the codes we generated in Section <a href="withinp.html#groupcoding">4.4</a>. First, I’ll regress <code>weight_diff</code> on <code>dietContrast</code>.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="withinp.html#cb32-1" aria-hidden="true" tabindex="-1"></a>wt_diff_dietc_model <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb32-2"><a href="withinp.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  weight_diff <span class="sc">~</span> dietContrast,</span>
+<span id="cb32-3"><a href="withinp.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> chick_4</span>
+<span id="cb32-4"><a href="withinp.html#cb32-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb32-5"><a href="withinp.html#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="withinp.html#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(wt_diff_dietc_model)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = weight_diff ~ dietContrast, data = chick_4)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+##  -10.8   -1.2    0.8    2.2    7.2 
+## 
+## Coefficients:
+##              Estimate Std. Error  t value  f value   R^2 Pr(&gt;|t|)    
+## (Intercept)    8.5000     0.4686  18.1378 328.9802 0.873  &lt; 2e-16 ***
+## dietContrast   3.4000     0.9373   3.6276  13.1592 0.215 0.000692 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.247 on 48 degrees of freedom
+## Multiple R-squared:  0.2152, Adjusted R-squared:  0.1988 
+## F-statistic: 13.16 on 1 and 48 DF,  p-value: 0.0006917</code></pre>
+<p>Let’s graph this as well to aid our interpretation.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="withinp.html#cb34-1" aria-hidden="true" tabindex="-1"></a>chick_4 <span class="sc">%&gt;%</span> </span>
+<span id="cb34-2"><a href="withinp.html#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb34-3"><a href="withinp.html#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> dietContrast, <span class="at">y =</span> weight_diff)</span>
+<span id="cb34-4"><a href="withinp.html#cb34-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb34-5"><a href="withinp.html#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb34-6"><a href="withinp.html#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># move each point slightly right or left for visibility</span></span>
+<span id="cb34-7"><a href="withinp.html#cb34-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width=</span>.<span class="dv">01</span>)</span>
+<span id="cb34-8"><a href="withinp.html#cb34-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb34-9"><a href="withinp.html#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Notice three things. First, all the points fall on either -.5 or +.5 on the x axis. This aligns with our coding scheme. In fact, I “jittered” the points right and left so they didn’t all just sit on top of each other, obscuring the full pattern. Second, our choice of codes puts <em>exactly</em> 1 unit on the x axis between our two conditions. Third, our y axis is now a difference score. You should think of it as “chick growth” because of the way we calculated it. Points that are higher on the y axis indicate more growth from day 0 to day 2. Critically, there is no indication of actual chick weight on this plot; it only graphs our difference score.</p>
+<p>We still fit a line, as before, because we are still predicting values of weight difference.</p>
+<p>Applying our interpretations:</p>
+<ul>
+<li>The intercept is the estimated value of chick weight growth for chicks at 0 on the contrast code. Since 0 is in the “middle” of the contrast values (-.5 and +.5), we interpret this as the average weight difference for chicks in our samples. The values are close to what they were before, <span class="math inline">\(b = 8.5, F(1, 48) = 329.0, p &lt; .001\)</span>. Chicks increased in weight significantly (statistically speaking) from day 0 to day 2.</li>
+<li>The slope is the predicted difference in outcome, <code>weight_diff</code> here, for a 1 unit change in the predictor, the contrast code. Here is where another clever feature of our coding scheme happens. Because there is exactly 1 unit of difference between our two diet conditions (see the x axis of the plot above), our slope indicates the average difference in chick growth going from diet 1 to diet 2. That is, chicks on diet 2 showed 3.4 more grams of growths than chicks on diet 1, on average.</li>
+</ul>
+<p>There is one more thing to do. I am going to run two more models, one for each dummy code we created earlier.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="withinp.html#cb36-1" aria-hidden="true" tabindex="-1"></a>wt_diff_diet1_model <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb36-2"><a href="withinp.html#cb36-2" aria-hidden="true" tabindex="-1"></a>  weight_diff <span class="sc">~</span> dietDummy1,</span>
+<span id="cb36-3"><a href="withinp.html#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> chick_4</span>
+<span id="cb36-4"><a href="withinp.html#cb36-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb36-5"><a href="withinp.html#cb36-5" aria-hidden="true" tabindex="-1"></a>wt_diff_diet2_model <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb36-6"><a href="withinp.html#cb36-6" aria-hidden="true" tabindex="-1"></a>  weight_diff <span class="sc">~</span> dietDummy2,</span>
+<span id="cb36-7"><a href="withinp.html#cb36-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> chick_4</span>
+<span id="cb36-8"><a href="withinp.html#cb36-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb36-9"><a href="withinp.html#cb36-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-10"><a href="withinp.html#cb36-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(wt_diff_diet1_model)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = weight_diff ~ dietDummy1, data = chick_4)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+##  -10.8   -1.2    0.8    2.2    7.2 
+## 
+## Coefficients:
+##             Estimate Std. Error  t value  f value   R^2 Pr(&gt;|t|)    
+## (Intercept)   6.8000     0.5928  11.4714 131.5921 0.733 2.35e-15 ***
+## dietDummy1    3.4000     0.9373   3.6276  13.1592 0.215 0.000692 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.247 on 48 degrees of freedom
+## Multiple R-squared:  0.2152, Adjusted R-squared:  0.1988 
+## F-statistic: 13.16 on 1 and 48 DF,  p-value: 0.0006917</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="withinp.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(wt_diff_diet2_model)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = weight_diff ~ dietDummy2, data = chick_4)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+##  -10.8   -1.2    0.8    2.2    7.2 
+## 
+## Coefficients:
+##             Estimate Std. Error  t value  f value   R^2 Pr(&gt;|t|)    
+## (Intercept)  10.2000     0.7260  14.0495 197.3881 0.804  &lt; 2e-16 ***
+## dietDummy2   -3.4000     0.9373  -3.6276  13.1592 0.215 0.000692 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.247 on 48 degrees of freedom
+## Multiple R-squared:  0.2152, Adjusted R-squared:  0.1988 
+## F-statistic: 13.16 on 1 and 48 DF,  p-value: 0.0006917</code></pre>
+<p>Look at the Estimate columns for each model. For these two models, the slope is exactly the same as it was in the contrast coded model, except that the one in the second model is negative. This is because our dummy codes, just like the contrast code, maintains a 1 unit difference between groups. As a challenge, can you explain why the slope in the model using <code>dummyDiet2</code> is negative?<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<p>What about the intercepts from these two models? Applying our interpretation mantra for intercepts, we would say that the intercept in the first model is the predicted value for weight growth when <code>dummyDiet1</code> is zero, or that the intercept represents the average weight growth for those on diet 1. It is significantly different from zero, so chicks on diet 1 are still growing from day 0 to day 2, but less than those on diet 2.</p>
+<p>The intercept from the model using <code>dummyDiet2</code> is larger than the intercept when using <code>dummyDiet1</code>. It is the average value of chicks on diet 2, following the same logic as before. Chicks on diet 2 also grow significantly from day 0 to day 2.</p>
+<p>Let me provide a full write up of these results.</p>
+<blockquote>
+<p>Chick weight was examined in a 2 (time: day 0 vs. day 2) x 2 (diet: 1 vs. 2) mixed model ANOVA with the first factor varying within chicks and the second factor varying between chicks. Averaging across diet, chicks showed significantly higher weights on day 2 than on day 1, <span class="math inline">\(b = 8.50, F(1, 48) = 329.0, p &lt; .001\)</span>, indicating overall growth in the first days of life. The growth trend was qualified by a significant interaction with diet, <span class="math inline">\(b = 3.40, F(1, 48) = 13.16, p &lt; .001\)</span>. Chicks on both diets showed significantly larger weights on day 2 than day 0, but growth was larger for diet 2,<span class="math inline">\(b_{diet2}=10.20, F(1,48)=197.39, p&lt;.001\)</span>, than for diet 1, <span class="math inline">\(b_{diet1}=6.80, F(1,48)=131.59, p&lt;.001\)</span>.</p>
+</blockquote>
+</div>
+<div id="other-possibilities" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Other Possibilities<a href="withinp.html#other-possibilities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You are not limited to contrast codes when regressing difference scores. You can regress difference scores on continuously measured variables as well. For example, we could imagine taking height measurements for each chick in our dataset. It would be a completely legimate use of regression modeling to regress our difference score on these height measurements.</p>
+<p>Note that we have restricted ourselves to two levels on our factors. There are ways to extend these analysis techniques to larger numbers of levels, 3, 4, 5, and so on. But this topic gets fairly involved. For the purpose of the URFP project, we’ll stick with these simpler models.</p>
+</div>
+<div id="chapter-takeaways-1" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Chapter Takeaways<a href="withinp.html#chapter-takeaways-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Difference scores can be used to index the change between a variable measured twice (or more) for the same participants.</li>
+<li>We can regress difference scores just like any other variable. An intercept-only model, <code>variable ~ 1</code>, allows us to test whether the average difference is statistically distinguishable from zero.</li>
+<li>For factors that vary between participants, we use contrast codes and dummy codes to allow regression-based analysis. The primary difference between contrast and dummy codes is where 0 lands, which gives us precise control over the statistical questions we ask.</li>
+<li>We can predict difference scores in a regression from codes or continuous variables.</li>
+</ul>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p>And, indeed, other analyses where the zero points of variables matter. We’ll see this when we get to interactions between two factors that vary between participants.<a href="withinp.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Hint: look at the dummy codes we set up and remember that the slope asks a directional question.<a href="withinp.html#fnref6" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mediation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-withinparticipant.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

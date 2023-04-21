@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Addendum: Dummy Codes for More Than 2 Groups | URFP Quantitative Project Textbook</title>
+  <meta name="description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Addendum: Dummy Codes for More Than 2 Groups | URFP Quantitative Project Textbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Addendum: Dummy Codes for More Than 2 Groups | URFP Quantitative Project Textbook" />
+  
+  <meta name="twitter:description" content="<p>This “textbook” contains a very brief introducion to skills that are needed for the analyses the
+students planned.</p>" />
+  
+
+<meta name="author" content="Christopher Mellinger, Ph.D." />
+
+
+<meta name="date" content="2023-04-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="moderation.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">URFP Analysis Textbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#r-help"><i class="fa fa-check"></i><b>1.1</b> R Help</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#using-r-studio"><i class="fa fa-check"></i><b>1.2</b> Using R Studio</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#packages-this-book-uses"><i class="fa fa-check"></i><b>1.3</b> Packages This Book Uses</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i><b>1.4</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basicops.html"><a href="basicops.html"><i class="fa fa-check"></i><b>2</b> Data Operaions</a></li>
+<li class="chapter" data-level="3" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>3</b> Regression</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="regression.html"><a href="regression.html#what-is-regression"><i class="fa fa-check"></i><b>3.1</b> What Is Regression?</a></li>
+<li class="chapter" data-level="3.2" data-path="regression.html"><a href="regression.html#intepreting-regression-output"><i class="fa fa-check"></i><b>3.2</b> Intepreting Regression Output</a></li>
+<li class="chapter" data-level="3.3" data-path="regression.html"><a href="regression.html#centering"><i class="fa fa-check"></i><b>3.3</b> Centering</a></li>
+<li class="chapter" data-level="3.4" data-path="regression.html"><a href="regression.html#interpreting-regression-with-mean-centered-predictors"><i class="fa fa-check"></i><b>3.4</b> Interpreting Regression with Mean-Centered Predictors</a></li>
+<li class="chapter" data-level="3.5" data-path="regression.html"><a href="regression.html#chapter-takeaways"><i class="fa fa-check"></i><b>3.5</b> Chapter Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="withinp.html"><a href="withinp.html"><i class="fa fa-check"></i><b>4</b> Within-Participant Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="withinp.html"><a href="withinp.html#example-chick-weights"><i class="fa fa-check"></i><b>4.1</b> Example: Chick Weights</a></li>
+<li class="chapter" data-level="4.2" data-path="withinp.html"><a href="withinp.html#computing-difference-scores"><i class="fa fa-check"></i><b>4.2</b> Computing Difference Scores</a></li>
+<li class="chapter" data-level="4.3" data-path="withinp.html"><a href="withinp.html#using-regression"><i class="fa fa-check"></i><b>4.3</b> Using Regression</a></li>
+<li class="chapter" data-level="4.4" data-path="withinp.html"><a href="withinp.html#groupcoding"><i class="fa fa-check"></i><b>4.4</b> Important Aside: Contrast &amp; Dummy Codes</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="withinp.html"><a href="withinp.html#contrast-coding-scheme-for-diet"><i class="fa fa-check"></i><b>4.4.1</b> Contrast coding scheme for diet</a></li>
+<li class="chapter" data-level="4.4.2" data-path="withinp.html"><a href="withinp.html#dummy-coding-scheme-for-diet"><i class="fa fa-check"></i><b>4.4.2</b> Dummy coding scheme for diet</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="withinp.html"><a href="withinp.html#predicting-a-difference-score"><i class="fa fa-check"></i><b>4.5</b> Predicting a Difference Score</a></li>
+<li class="chapter" data-level="4.6" data-path="withinp.html"><a href="withinp.html#other-possibilities"><i class="fa fa-check"></i><b>4.6</b> Other Possibilities</a></li>
+<li class="chapter" data-level="4.7" data-path="withinp.html"><a href="withinp.html#chapter-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Chapter Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="mediation.html"><a href="mediation.html"><i class="fa fa-check"></i><b>5</b> Mediation</a></li>
+<li class="chapter" data-level="6" data-path="moderation.html"><a href="moderation.html"><i class="fa fa-check"></i><b>6</b> Moderation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="moderation.html"><a href="moderation.html#mathematical-explanation"><i class="fa fa-check"></i><b>6.1</b> Mathematical Explanation</a></li>
+<li class="chapter" data-level="6.2" data-path="moderation.html"><a href="moderation.html#example-model"><i class="fa fa-check"></i><b>6.2</b> Example Model</a></li>
+<li class="chapter" data-level="6.3" data-path="moderation.html"><a href="moderation.html#interpretting-interactions"><i class="fa fa-check"></i><b>6.3</b> Interpretting Interactions</a></li>
+<li class="chapter" data-level="6.4" data-path="moderation.html"><a href="moderation.html#extension-to-continous-moderators"><i class="fa fa-check"></i><b>6.4</b> Extension to Continous Moderators</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html"><i class="fa fa-check"></i><b>7</b> Addendum: Dummy Codes for More Than 2 Groups</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html#assigning-codes"><i class="fa fa-check"></i><b>7.1</b> Assigning Codes</a></li>
+<li class="chapter" data-level="7.2" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html#analyzing-with-codes"><i class="fa fa-check"></i><b>7.2</b> Analyzing with Codes</a></li>
+<li class="chapter" data-level="7.3" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html#moderation-with-dummy-codes"><i class="fa fa-check"></i><b>7.3</b> Moderation with Dummy Codes</a></li>
+<li class="chapter" data-level="7.4" data-path="addendum-dummy-codes-for-more-than-2-groups.html"><a href="addendum-dummy-codes-for-more-than-2-groups.html#other-handy-functions"><i class="fa fa-check"></i><b>7.4</b> Other Handy Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">URFP Quantitative Project Textbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="addendum-dummy-codes-for-more-than-2-groups" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Addendum: Dummy Codes for More Than 2 Groups<a href="addendum-dummy-codes-for-more-than-2-groups.html#addendum-dummy-codes-for-more-than-2-groups" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In Section <a href="withinp.html#groupcoding">4.4</a>, we discussed contrast and dummy codes for two-level variables. However, there are many situations where a variable might have more than two levels. A very common social science example is personal identity. Most dimensions have more than two levels that take no particular order. For race and ethnicity, we might have Black, South Asian, East Asian, Native American, White, and multi-racial individuals in a sample. For gender, we might have women, men, non-binary, two-spirity, and those who don’t identify with any particular grouping. For each of these, we need a way to analyze an outcome by the levels of these predictors.</p>
+<p>In this chapter, I will only cover dummy codes. This limits us quite a bit for models involving interactions, but dummy codes are common and fairly intuitive. To illustrate a dummy code, let’s look at the <code>mtcars</code> dataset again. The variable <code>gear</code> provides the number of forward gears that each car has. For the purposes of this example, we’ll assume that we do not know if the number of gears is ordered in any way for the purposes of our analysis.</p>
+<div id="assigning-codes" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Assigning Codes<a href="addendum-dummy-codes-for-more-than-2-groups.html#assigning-codes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For categorical variables with more than two levels, we will need more than one code. In general, the number of codes required to represent a set of categories is one less than the number of categories. For the example in Chapter <a href="withinp.html#withinp">4</a>, there were only two levels of diet condition, so we only needed one code. But here, we have three levels, so we will need two codes.</p>
+<p>The way we construct the codes is to set one group to 0 across all codes in the set. Then, each group gets a code where it is assigned 1, and everything else gets a zero. In table format, here is what our codes will look like:</p>
+<div class="tabwid"><style>.cl-5e53b83e{}.cl-5e4ab0ea{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5e4ea2f4{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5e4ebf78{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5e4ebf82{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5e4ebf8c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-5e53b83e'><thead><tr style="overflow-wrap:break-word;"><th class="cl-5e4ebf78"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">3-gear cars</span></p></th><th class="cl-5e4ebf78"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">4-gear cars</span></p></th><th class="cl-5e4ebf78"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">5-gear cars</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-5e4ebf82"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">0</span></p></td><td class="cl-5e4ebf82"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">1</span></p></td><td class="cl-5e4ebf82"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">0</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e4ebf8c"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">0</span></p></td><td class="cl-5e4ebf8c"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">0</span></p></td><td class="cl-5e4ebf8c"><p class="cl-5e4ea2f4"><span class="cl-5e4ab0ea">1</span></p></td></tr></tbody></table></div>
+<p>We usually want to give our codes name. See the r code below for how I do this. I define three different versions of our code, which we can use later for various purposes.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-1" aria-hidden="true" tabindex="-1"></a>mtcars_analysis <span class="ot">=</span> mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb51-2"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb51-3"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># dummy codes for gears. I&#39;m naming it for the level of the factor that is </span></span>
+<span id="cb51-4"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># always coded zero</span></span>
+<span id="cb51-5"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">gear_dumTriple_1 =</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">3</span>) <span class="sc">+</span> <span class="dv">1</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">4</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">5</span>),</span>
+<span id="cb51-6"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">gear_dumTriple_2 =</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">3</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">4</span>) <span class="sc">+</span> <span class="dv">1</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">5</span>),</span>
+<span id="cb51-7"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb51-8"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A different set of codes, with 4-gear cars always coded zero.</span></span>
+<span id="cb51-9"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">gear_dumQuad_1 =</span> <span class="dv">1</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">3</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">4</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">5</span>),</span>
+<span id="cb51-10"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">gear_dumQuad_2 =</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">3</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">4</span>) <span class="sc">+</span> <span class="dv">1</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">5</span>),</span>
+<span id="cb51-11"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb51-12"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># a final set with 5-gear cars coded zero</span></span>
+<span id="cb51-13"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb51-14"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">gear_dumQuin_1 =</span> <span class="dv">1</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">3</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">4</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">5</span>),</span>
+<span id="cb51-15"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">gear_dumQuin_2 =</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">3</span>) <span class="sc">+</span> <span class="dv">1</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">4</span>) <span class="sc">+</span> <span class="dv">0</span> <span class="sc">*</span> (gear<span class="sc">==</span><span class="dv">5</span>),</span>
+<span id="cb51-16"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb51-17"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># I also want centered weight so we can ask about it:</span></span>
+<span id="cb51-18"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">wtC =</span> wt <span class="sc">-</span> <span class="fu">mean</span>(wt),</span>
+<span id="cb51-19"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">wtHi =</span> wtC <span class="sc">-</span> <span class="fu">sd</span>(wt),</span>
+<span id="cb51-20"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">wtLo =</span> wtC <span class="sc">-</span> (<span class="sc">-</span><span class="fu">sd</span>(wt))</span>
+<span id="cb51-21"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb51-21" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+</div>
+<div id="analyzing-with-codes" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Analyzing with Codes<a href="addendum-dummy-codes-for-more-than-2-groups.html#analyzing-with-codes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To perform a traditional one-way ANOVA, we simply enter all the codes from any complete set.</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb52-1" aria-hidden="true" tabindex="-1"></a>oneWayTripleModel <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb52-2"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb52-2" aria-hidden="true" tabindex="-1"></a>  mpg <span class="sc">~</span> gear_dumTriple_1 <span class="sc">+</span> gear_dumTriple_2,</span>
+<span id="cb52-3"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mtcars_analysis</span>
+<span id="cb52-4"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb52-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb52-5"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb52-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-6"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(oneWayTripleModel)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ gear_dumTriple_1 + gear_dumTriple_2, data = mtcars_analysis)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -6.7333 -3.2333 -0.9067  2.8483  9.3667 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value f value   R^2 Pr(&gt;|t|)    
+## (Intercept)        16.107      1.216  13.250 175.559 0.858 7.87e-14 ***
+## gear_dumTriple_1    8.427      1.823   4.621  21.357 0.424 7.26e-05 ***
+## gear_dumTriple_2    5.273      2.431   2.169   4.705 0.140   0.0384 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 4.708 on 29 degrees of freedom
+## Multiple R-squared:  0.4292, Adjusted R-squared:  0.3898 
+## F-statistic:  10.9 on 2 and 29 DF,  p-value: 0.0002948</code></pre>
+<p>Let’s apply our interpretation mantras:</p>
+<ul>
+<li>Intercept: the intercept represents the average predicted value on MPG for cars which score zero on all predictors. In this case, the <code>gear_dumTripl</code> set of variables always coded cars with three gears as zero. So the intercept of 16.11 is the average MPG for cars with three gears, and this is significantly different from zero, <span class="math inline">\(b = 16.11, F(1,29)=175.6, p&lt;.001\)</span>.</li>
+<li><code>gear_dumtriple_1</code> slope: for each one-unit increase in the predictor, 8.427 MPG more is predicted by the model. For this code, cars with 4 gears are coded 1, and all other cars are coded 0. An increase in one unit on this scale means going from cars with 3 or 5 gears to cars with 4 gears. The model predicts that cars with 4 gears have significantly more efficiency than cars with 3 or 4 gears, <span class="math inline">\(b=8.427, F(1,29)=21.4, p&lt;.001\)</span>, specificlaly by 8.427 MPG.</li>
+<li><code>gear_dumTriple_2</code> is coded 0 for cars with 3 or 4 gears and 1 for cars with 5 gears. Going from 0 to 1 on this predictor means comparing all cars without 5 gears to all cars with 5 gears. Our model predicts that cars wtih 5 gears have 5.273 more MPG than cars wtih 3 or 4 gears, a statistically significant difference, <span class="math inline">\(b = 5.273, F(1,29)=4.71, p=.038\)</span>.</li>
+</ul>
+<p>Notice that dummy codes set up comparisons of one category to all other categories. The group that is always coded zero is never compared by itself to all other cars. Instead, this group gets the special status that the intercept is estimated as its average, and compared statistically to zero. In the model above, we find that cars with 3 gears have a non-zero efficiency, which is a bit silly. But we also see that cars with 4 gears are better, on average, than other cars, and cars with 5 gears on average are also better than lumping other cars together. We might infer that cars with 3 gears are probably poor as a result, but to statistically check this we need to run the same model with but another set of codes.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb54-1" aria-hidden="true" tabindex="-1"></a>oneWayQuadModel <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb54-2"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb54-2" aria-hidden="true" tabindex="-1"></a>  mpg <span class="sc">~</span> gear_dumQuad_1 <span class="sc">+</span> gear_dumQuad_2,</span>
+<span id="cb54-3"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mtcars_analysis</span>
+<span id="cb54-4"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb54-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb54-5"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb54-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-6"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(oneWayQuadModel)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ gear_dumQuad_1 + gear_dumQuad_2, data = mtcars_analysis)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -6.7333 -3.2333 -0.9067  2.8483  9.3667 
+## 
+## Coefficients:
+##                Estimate Std. Error t value f value   R^2 Pr(&gt;|t|)    
+## (Intercept)      24.533      1.359  18.051 325.847 0.918  &lt; 2e-16 ***
+## gear_dumQuad_1   -8.427      1.823  -4.621  21.357 0.424 7.26e-05 ***
+## gear_dumQuad_2   -3.153      2.506  -1.258   1.583 0.052    0.218    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 4.708 on 29 degrees of freedom
+## Multiple R-squared:  0.4292, Adjusted R-squared:  0.3898 
+## F-statistic:  10.9 on 2 and 29 DF,  p-value: 0.0002948</code></pre>
+<p>Interpret!</p>
+<ul>
+<li>Intercept: cars with 4 gears (always coded zero on the <code>gear_dumQuad</code> code set) have an average efficiency of 24.533 MPG, which is significantly above zero, <span class="math inline">\(b=24.533, F(1, 29)=325.85, p&lt;.001\)</span>.</li>
+<li><code>gear_dumQuad_1</code> slope: cars with 3 gears have, on average, 8.427 MPG less than cars with 4 or 5 gears (lumped together as a group), a significant difference in efficiency, <span class="math inline">\(b=-8.427, F(1,29)=21.36, p&lt;.001\)</span>.</li>
+<li>As an excerise, I’ll leave the interpretation of <code>gear_dumQuad_2</code> to the reader. Which two groups of cars does this code compare?</li>
+</ul>
+</div>
+<div id="moderation-with-dummy-codes" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Moderation with Dummy Codes<a href="addendum-dummy-codes-for-more-than-2-groups.html#moderation-with-dummy-codes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Just like contrast codes, we can examine moderation for dummy codes. The same rules apply. The one thing that might look different is how the interaction is set up. Examine the model below.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb56-1" aria-hidden="true" tabindex="-1"></a>weightTripleGearModel <span class="ot">=</span> <span class="fu">lm</span>(</span>
+<span id="cb56-2"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb56-2" aria-hidden="true" tabindex="-1"></a>  mpg <span class="sc">~</span> wtC <span class="sc">+</span> gear_dumTriple_1 <span class="sc">+</span> wtC <span class="sc">*</span> gear_dumTriple_1 <span class="sc">+</span> wtC <span class="sc">*</span> gear_dumTriple_2,</span>
+<span id="cb56-3"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mtcars_analysis</span>
+<span id="cb56-4"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb56-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb56-5"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb56-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-6"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lmSummary</span>(weightTripleGearModel)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ wtC + gear_dumTriple_1 + wtC * gear_dumTriple_1 + 
+##     wtC * gear_dumTriple_2, data = mtcars_analysis)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.7695 -1.7659 -0.2816  1.1631  5.0069 
+## 
+## Coefficients:
+##                      Estimate Std. Error  t value  f value   R^2 Pr(&gt;|t|)    
+## (Intercept)           18.2386     0.8489  21.4852 461.6156 0.947  &lt; 2e-16 ***
+## wtC                   -3.1569     0.8080  -3.9069  15.2638 0.370 0.000596 ***
+## gear_dumTriple_1       2.1726     1.3299   1.6336   2.6687 0.093 0.114395    
+## gear_dumTriple_2      -1.5629     1.6725  -0.9345   0.8733 0.032 0.358650    
+## wtC:gear_dumTriple_1  -3.7066     1.4469  -2.5618   6.5630 0.202 0.016557 *  
+## wtC:gear_dumTriple_2  -4.8895     1.7370  -2.8149   7.9235 0.234 0.009180 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.518 on 26 degrees of freedom
+## Multiple R-squared:  0.8536, Adjusted R-squared:  0.8254 
+## F-statistic: 30.31 on 5 and 26 DF,  p-value: 4.629e-10</code></pre>
+<p>Exactly the same interpretation rules apply. The intercept is still the predicted value for a car that has zero on all predictors. As an exercise, what kind of car has zero on all predictors? See the footnote for the answer.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> The <code>wtC</code> predictor is a lower-order predictor here (because it is in an interaction), so we interpret it as a the weight effect for a car coded zero in our dummy codes.</p>
+<ul>
+<li>Cars with 3 gears showed a significant weight effect, such that 1 ton more mass is predicted to reduce efficiency by 3.257 MPG, <span class="math inline">\(b=3.257, F(1,26)=15.26, p&lt;.001\)</span>.</li>
+<li>I’ll skip the dummy code interpretations, but remember that they are also the effect of the predictor for a car that has a value of zero on <code>wtC</code>.</li>
+<li><code>wtC:gear_dumTriple_1</code>: The <code>wtC</code> effect is 3.707 units lower for cars with 4 gears than for cars with 3 and 5 gears, indiciated a significant interaction, <span class="math inline">\(b= -3.707, F(1, 26)=6.56, p=.017\)</span>.</li>
+<li><code>wtC:gear_dumTriple_2</code>: The <code>wtC</code> effect is 4.890 units lower for cars with 5 gears than for cars with 3 and 4 gears, indiciated a significant interaction, <span class="math inline">\(b= -4.890, F(1, 26)=7.92, p=.009\)</span>.</li>
+</ul>
+<p>So we have significant evidence of interaction! Note that we would have evidence of interaction if even one of the two interaction terms emerged; we don’t need both.</p>
+<p>Notice that if we switched out our code set, we would be examinign the effect of weight for a different set of cars. For example, what cars would the weight effect represent if we used the <code>gear_dumQuad</code> set?<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
+</div>
+<div id="other-handy-functions" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Other Handy Functions<a href="addendum-dummy-codes-for-more-than-2-groups.html#other-handy-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When you are looking at multiple category variables, you might want a way to summarize the results. Here’s a handy and quick way using tidyverse. This assumes we are interested in two factors, number of gears and transmission type.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb58-1" aria-hidden="true" tabindex="-1"></a>mtcars_analysis <span class="sc">%&gt;%</span> </span>
+<span id="cb58-2"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gear, am) <span class="sc">%&gt;%</span> </span>
+<span id="cb58-3"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb58-4"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb58-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mean =</span> <span class="fu">mean</span>(mpg),</span>
+<span id="cb58-5"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb58-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">SD =</span> <span class="fu">sd</span>(mpg)</span>
+<span id="cb58-6"><a href="addendum-dummy-codes-for-more-than-2-groups.html#cb58-6" aria-hidden="true" tabindex="-1"></a>  ) </span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;gear&#39;. You
+## can override using the `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 4 × 4
+## # Groups:   gear [3]
+##    gear    am  Mean    SD
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     3     0  16.1  3.37
+## 2     4     0  21.0  3.07
+## 3     4     1  26.3  5.41
+## 4     5     1  21.4  6.66</code></pre>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="7">
+<li id="fn7"><p>A car with zero on <code>wtC</code> is a car of average weight. The dummy code set always codes cars with 3 gears as 0, so our car here is a 3-gear car of average weight.<a href="addendum-dummy-codes-for-more-than-2-groups.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>The <code>gear_dumQuad</code> set of codes always assigns 0 to cars with 4 gears. In a model with <code>wtC</code>, the quad set of codes, and their interaction terms, the <code>wtC</code> effect would represent the predicted increase in MPG for a 1 ton increase in weight, but specifically in cars with 4 gears.<a href="addendum-dummy-codes-for-more-than-2-groups.html#fnref8" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="moderation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-dummycodes.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

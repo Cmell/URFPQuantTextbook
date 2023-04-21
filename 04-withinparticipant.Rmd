@@ -1,4 +1,4 @@
-# Within-Participant Analysis
+# Within-Participant Analysis {#withinp}
 
 There are lots of situations where we might have multiple measures of the same units of analysis. We could imagine measure a car's efficiency, and then making an upgrade to the engine, and measuring its efficiency after the upgrade. Perhaps we could test a tutoring intervention by giving students a test on a topic, allowing them to get tutored, and then measuring their knowledge post-tutoring session.
 
